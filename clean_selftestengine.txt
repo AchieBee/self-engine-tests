@@ -1,0 +1,1824 @@
+Question,Ans1,Ans2,Ans3,Ans4,Correct ans,Explanation,Check/Radio
+
+NEW QUESTION 1
+In Amazon EC2 Container Service components, what is the name of a logical grouping of container instances on which you can place tasks?
+A. A cluster
+B. A container instance
+C. A container
+D. A task definition
+Answer: A
+Explanation:
+Amazon ECS contains the following components:
+A Cluster is a logical grouping of container instances that you can place tasks on.
+A Container instance is an Amazon EC2 instance that is running the Amazon ECS agent and has been registered into a cluster.
+A Task definition is a description of an application that contains one or more container definitions. A Scheduler is the method used for placing tasks on container
+instances.
+A Service is an Amazon ECS service that allows you to run and maintain a specified number of instances of a task definition simultaneously.
+A Task is an instantiation of a task definition that is running on a container instance. A Container is a Linux container that was created as part of a task.
+Reference: http://docs.aws.amazon.com/AmazonECS/latest/developerguide/Welcome.html
+
+NEW QUESTION 2
+Can a user get a notification of each instance start / terminate configured with Auto Scaling?
+A. Yes, if configured with the Launch Config
+B. Yes, always
+C. Yes, if configured with the Auto Scaling group
+D. No
+Answer: C
+Explanation:
+The user can get notifications using SNS if he has configured the notifications while creating the Auto Scaling group.
+Reference: http://docs.aws.amazon.com/AutoScaIing/latest/DeveIoperGuide/GettingStartedTutoriaI.html
+
+NEW QUESTION 3
+To specify a resource in a policy statement, in Amazon EC2, can you use its Amazon Resource Name (ARN)?
+A. Yes, you can.
+B. No, you can't because EC2 is not related to ARN.
+C. No, you can't because you can't specify a particular Amazon EC2 resource in an IAM policy.
+D. Yes, you can but only for the resources that are not affected by the actio
+Answer: A
+Explanation:
+Some Amazon EC2 API actions allow you to include specific resources in your policy that can be created or modified by the action. To specify a resource in the
+statement, you need to use its Amazon Resource Name (ARN).
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-ug.pdf
+
+NEW QUESTION 4
+After you recommend Amazon Redshift to a client as an alternative solution to paying data warehouses to analyze his data, your client asks you to explain why you
+are recommending Redshift. Which of the following would be a reasonable response to his request?
+A. It has high performance at scale as data and query complexity grows.
+B. It prevents reporting and analytic processing from interfering with the performance of OLTP workloads.
+C. You don't have the administrative burden of running your own data warehouse and dealing with setup, durability, monitoring, scaling, and patching.
+D. All answers listed are a reasonable response to his QUESTION
+Answer: D
+Explanation:
+Amazon Redshift delivers fast query performance by using columnar storage technology to improve I/O efficiency and parallelizing queries across multiple nodes.
+Redshift uses standard PostgreSQL JDBC and ODBC drivers, allowing you to use a wide range of familiar SQL clients. Data load speed scales linearly with cluster
+size, with integrations to Amazon S3, Amazon DynamoDB, Amazon Elastic MapReduce,
+Amazon Kinesis or any SSH-enabled host.
+AWS recommends Amazon Redshift for customers who have a combination of needs, such as: High performance at scale as data and query complexity grows
+Desire to prevent reporting and analytic processing from interfering with the performance of OLTP workloads
+Large volumes of structured data to persist and query using standard SQL and existing BI tools Desire to the administrative burden of running one's own data
+warehouse and dealing with setup, durability, monitoring, scaling and patching
+Reference: https://aws.amazon.com/running_databases/#redshift_anchor
+
+NEW QUESTION 5
+What is a placement group in Amazon EC2?
+A. It is a group of EC2 instances within a single Availability Zone.
+B. It the edge location of your web content.
+C. It is the AWS region where you run the EC2 instance of your web content.
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+D. It is a group used to span multiple Availability Zone
+Answer: A
+Explanation:
+A placement group is a logical grouping of instances within a single Availability Zone. Reference:
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
+
+NEW QUESTION 6
+True orfalsez A VPC contains multiple subnets, where each subnet can span multiple Availability Zones.
+A. This is true only if requested during the set-up of VPC.
+B. This is true.
+C. This is false.
+D. This is true only for US region
+Answer: C
+Explanation:
+A VPC can span several Availability Zones. In contrast, a subnet must reside within a single Availability Zone.
+Reference: https://aws.amazon.com/vpc/faqs/
+
+NEW QUESTION 7
+You are looking at ways to improve some existing infrastructure as it seems a lot of engineering resources are being taken up with basic management and
+monitoring tasks and the costs seem to be excessive.
+You are thinking of deploying Amazon E|asticCache to help. Which of the following statements is true in regards to EIasticCache?
+A. You can improve load and response times to user actions and queries however the cost associated with scaling web applications will be more.
+B. You can't improve load and response times to user actions and queries but you can reduce the cost associated with scaling web applications.
+C. You can improve load and response times to user actions and queries however the cost associated with scaling web applications will remain the same.
+D. You can improve load and response times to user actions and queries and also reduce the cost associated with scaling web applications.
+Answer: D
+Explanation:
+Amazon EIastiCache is a web service that makes it easy to deploy and run Memcached or Redis protocol-compliant server nodes in the cloud. Amazon
+EIastiCache improves the performance of web applications by allowing you to retrieve information from a fast, managed, in-memory caching system, instead of
+relying entirely on slower disk-based databases. The service simplifies and offloads the management, monitoring and operation of in-memory cache environments,
+enabling your engineering resources to focus on developing applications.
+Using Amazon EIastiCache, you can not only improve load and response times to user actions and queries, but also reduce the cost associated with scaling web
+applications.
+Reference: https://aws.amazon.com/eIasticache/faqs/
+
+NEW QUESTION 8
+An organization has three separate AWS accounts, one each for development, testing, and production. The organization wants the testing team to have access to
+certain AWS resources in the production account. How can the organization achieve this?
+A. It is not possible to access resources of one account with another account.
+B. Create the IAM roles with cross account access.
+C. Create the IAM user in a test account, and allow it access to the production environment with the IAM policy.
+D. Create the IAM users with cross account acces
+Answer: B
+Explanation:
+An organization has multiple AWS accounts to isolate a development environment from a testing or production environment. At times the users from one account
+need to access resources in the other account, such as promoting an update from the development environment to the production environment. In this case the
+IAM role with cross account access will provide a solution. Cross account access lets one account share access to their resources with users in the other AWS
+accounts.
+Reference: http://media.amazonwebservices.com/AWS_Security_Best_Practices.pdf
+
+NEW QUESTION 9
+You need to migrate a large amount of data into the cloud that you have stored on a hard disk and you decide that the best way to accomplish this is with AWS
+Import/Export and you mail the hard disk to AWS. Which of the following statements is incorrect in regards to AWS Import/Export?
+A. It can export from Amazon S3
+B. It can Import to Amazon Glacier
+C. It can export from Amazon Glacier.
+D. It can Import to Amazon EBS
+Answer: C
+Explanation:
+AWS Import/Export supports: Import to Amazon S3
+Export from Amazon S3 Import to Amazon EBS Import to Amazon Glacier
+AWS Import/Export does not currently support export from Amazon EBS or Amazon Glacier. Reference:
+https://docs.aws.amazon.com/AWSImportExport/Iatest/DG/whatisdisk.html
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+NEW QUESTION 10
+Can you specify the security group that you created for a VPC when you launch an instance in EC2-Classic?
+A. No, you can specify the security group created for EC2-Classic when you launch a VPC instance.
+B. No
+C. Yes
+D. No, you can specify the security group created for EC2-Classic to a non-VPC based instance onl
+Answer: B
+Explanation:
+If you're using EC2-Classic, you must use security groups created specifically for EC2-Classic. When you launch an instance in EC2-Classic, you must specify a
+security group in the same region as the instance. You can't specify a security group that you created for a VPC when you launch an instance in
+EC2-Classic.
+Reference:
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.htmI#ec2-classic-securit y-groups
+
+NEW QUESTION 10
+While using the EC2 GET requests as URLs, the is the URL that serves as the entry point for the web service.
+A. token
+B. endpoint
+C. action
+D. None of these
+Answer: B
+Explanation:
+The endpoint is the URL that serves as the entry point for the web service.
+Reference: http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/using-query-api.htmI
+
+NEW QUESTION 12
+You have been asked to build a database warehouse using Amazon Redshift. You know a little about it, including that it is a SQL data warehouse solution, and
+uses industry standard ODBC and JDBC connections and PostgreSQL drivers. However you are not sure about what sort of storage it uses for database tables.
+What sort of storage does Amazon Redshift use for database tables?
+A. InnoDB Tables
+B. NDB data storage
+C. Columnar data storage
+D. NDB CLUSTER Storage
+Answer: C
+Explanation:
+Amazon Redshift achieves efficient storage and optimum query performance through a combination of massively parallel processing, columnar data storage, and
+very efficient, targeted data compression encoding schemes.
+Columnar storage for database tables is an important factor in optimizing analytic query performance because it drastically reduces the overall disk I/O
+requirements and reduces the amount of data you need to load from disk.
+Reference: http://docs.aws.amazon.com/redshift/latest/dg/c_co|umnar_storage_disk_mem_mgmnt.html
+
+NEW QUESTION 14
+Which of the below mentioned options is not available when an instance is launched by Auto Scaling with EC2 Classic?
+A. Public IP
+B. Elastic IP
+C. Private DNS
+D. Private IP
+Answer: B
+Explanation:
+Auto Scaling supports both EC2 classic and EC2-VPC. When an instance is launched as a part of EC2 classic, it will have the public IP and DNS as well as the
+private IP and DNS.
+Reference: http://docs.aws.amazon.com/AutoScaIing/latest/DeveIoperGuide/GettingStartedTutoriaI.html
+
+NEW QUESTION 18
+In DynamoDB, could you use IAM to grant access to Amazon DynamoDB resources and API actions?
+A. In DynamoDB there is no need to grant access
+B. Depended to the type of access
+C. No
+D. Yes
+Answer: D
+Explanation:
+Amazon DynamoDB integrates with AWS Identity and Access Management (IAM). You can use AWS IAM to grant access to Amazon DynamoDB resources and
+API actions. To do this, you first write an AWS IAM policy, which is a document that explicitly lists the permissions you want to grant. You then attach that policy to
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+an AWS IAM user or role.
+Reference: http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/UsingIAMWithDDB.htmI
+
+NEW QUESTION 22
+Your EBS volumes do not seem to be performing as expected and your team leader has requested you look into improving their performance. Which of the
+following is not a true statement relating to the performance of your EBS volumes?
+A. Frequent snapshots provide a higher level of data durability and they will not degrade the performance of your application while the snapshot is in progress.
+B. General Purpose (SSD) and Provisioned IOPS (SSD) volumes have a throughput limit of 128 MB/s per volume.
+C. There is a relationship between the maximum performance of your EBS volumes, the amount of I/O you are drMng to them, and the amount of time it takes for
+each transaction to complete.
+D. There is a 5 to 50 percent reduction in IOPS when you first access each block of data on a newly created or restored EBS volume
+Answer: A
+Explanation:
+Several factors can affect the performance of Amazon EBS volumes, such as instance configuration, I/O characteristics, workload demand, and storage
+configuration.
+Frequent snapshots provide a higher level of data durability, but they may slightly degrade the
+performance of your application while the snapshot is in progress. This trade off becomes critical when you have data that changes rapidly. Whenever possible,
+plan for snapshots to occur during off-peak times in order to minimize workload impact.
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/EBSPerformance.htmI
+
+NEW QUESTION 24
+A major finance organisation has engaged your company to set up a large data mining application. Using AWS you decide the best service for this is Amazon
+Elastic MapReduce(EMR) which you know uses Hadoop. Which of the following statements best describes Hadoop?
+A. Hadoop is 3rd Party software which can be installed using AMI
+B. Hadoop is an open source python web framework
+C. Hadoop is an open source Java software framework
+D. Hadoop is an open source javascript framework
+Answer: C
+Explanation:
+Amazon EMR uses Apache Hadoop as its distributed data processing engine.
+Hadoop is an open source, Java software framework that supports data-intensive distributed applications running on large clusters of commodity hardware.
+Hadoop implements a programming model named "MapReduce," where the data is dMded into many small fragments of work, each of which may be executed on
+any node in the cluster.
+This framework has been widely used by developers, enterprises and startups and has proven to be a reliable software platform for processing up to petabytes of
+data on clusters of thousands of commodity machines.
+Reference: http://aws.amazon.com/elasticmapreduce/faqs/
+
+NEW QUESTION 26
+is a fast, filexible, fully managed push messaging service.
+A. Amazon SNS
+B. Amazon SES
+C. Amazon SQS
+D. Amazon FPS
+Answer: A
+Explanation:
+Amazon Simple Notification Service (Amazon SNS) is a fast, filexible, fully managed push messaging service. Amazon SNS makes it simple and cost-effective to
+push to mobile devices such as iPhone, iPad, Android, Kindle Fire, and internet connected smart devices, as well as pushing to other distributed services.
+Reference: http://aws.amazon.com/sns/?nc1=h_I2_as
+
+NEW QUESTION 27
+As AWS grows, most of your cIients' main concerns seem to be about security, especially when all of their competitors also seem to be using AWS. One of your
+clients asks you whether having a competitor who hosts their EC2 instances on the same physical host would make it easier for the competitor to hack into the
+cIient's data. Which of the following statements would be the best choice to put your cIient's mind at rest?
+A. Different instances running on the same physical machine are isolated from each other via a 256-bit Advanced Encryption Standard (AES-256).
+B. Different instances running on the same physical machine are isolated from each other via the Xen hypervisor and via a 256-bit Advanced Encryption Standard
+(AES-256).
+C. Different instances running on the same physical machine are isolated from each other via the Xen hypervisor.
+D. Different instances running on the same physical machine are isolated from each other via IAM permissions.
+Answer: C
+Explanation:
+Amazon Elastic Compute Cloud (EC2) is a key component in Amazon’s Infrastructure as a Service (IaaS), providing resizable computing capacity using server
+instances in AWS’s data centers. Amazon EC2 is designed to make web-scale computing easier by enabling you to obtain and configure capacity with minimal
+friction.
+You create and launch instances, which are collections of platform hardware and software. Different instances running on the same physical machine are isolated
+from each other via the Xen hypervisor.
+Amazon is active in the Xen community, which provides awareness of the latest developments. In addition, the AWS firewall resides within the hypervisor layer,
+between the physical network interface and the instance's virtual interface. All packets must pass through this layer, thus an instance’s neighbors have no more
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+access to that instance than any other host on the Internet and can be treated as if they are on
+separate physical hosts. The physical RAM is separated using similar mechanisms.
+Reference: http://d0.awsstatic.com/whitepapers/Security/AWS%20Security%20Whitepaper.pdf
+
+NEW QUESTION 29
+You have just been given a scope for a new client who has an enormous amount of data(petabytes) that he constantly needs analysed. Currently he is paying a
+huge amount of money for a data warehousing company to do this for him and is wondering if AWS can provide a cheaper solution. Do you think AWS has a
+solution for this?
+A. Ye
+B. Amazon SimpIeDB
+C. N
+D. Not presently
+E. Ye
+F. Amazon Redshift
+G. Ye
+H. Your choice of relational AMIs on Amazon EC2 and EBS
+Answer: C
+Explanation:
+Amazon Redshift is a fast, fully managed, petabyte-scale data warehouse service that makes it simple and cost-effective to efficiently analyze all your data using
+your existing business intelligence tools. You can start small for just $0.25 per hour with no commitments or upfront costs and scale to a petabyte or more for
+$1,000 per terabyte per year, less than a tenth of most other data warehousing solutions. Amazon Redshift delivers fast query performance by using columnar
+storage technology to improve I/O efficiency and parallelizing queries across multiple nodes. Redshift uses standard PostgreSQL JDBC and ODBC drivers,
+allowing you to use a wide range of familiar SQL clients. Data load speed scales linearly with cluster size, with integrations to Amazon S3, Amazon DynamoDB,
+Amazon Elastic MapReduce, Amazon Kinesis or any SSH-enabled host.
+Reference: https://aws.amazon.com/running_databases/#redshift_anchor
+
+NEW QUESTION 34
+In an experiment, if the minimum size for an Auto Scaling group is 1 instance, which of the following statements holds true when you terminate the running
+instance?
+A. Auto Scaling must launch a new instance to replace it.
+B. Auto Scaling will raise an alarm and send a notification to the user for action.
+C. Auto Scaling must configure the schedule actMty that terminates the instance after 5 days.
+D. Auto Scaling will terminate the experimen
+Answer: A
+Explanation:
+If the minimum size for an Auto Scaling group is 1 instance, when you terminate the running instance, Auto Scaling must launch a new instance to replace it.
+Reference:http://docs.aws.amazon.com/AutoScaIing/latest/Deve|operGuide/AS_Concepts.htmI
+
+NEW QUESTION 38
+An organization has created an application which is hosted on the AWS EC2 instance. The application stores images to S3 when the end user uploads to it. The
+organization does not want to store the AWS secure credentials required to access the S3 inside the instance. Which of the below mentioned options is a possible
+solution to avoid any security threat?
+A. Use the IAM based single sign between the AWS resources and the organization application.
+B. Use the IAM role and assign it to the instance.
+C. Since the application is hosted on EC2, it does not need credentials to access S3.
+D. Use the X.509 certificates instead of the access and the secret access key
+Answer: B
+Explanation:
+The AWS IAM role uses temporary security credentials to access AWS services. Once the role is assigned to an instance, it will not need any security credentials
+to be stored on the instance. Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html
+
+NEW QUESTION 43
+A user has launched 10 EC2 instances inside a placement group. Which of the below mentioned statements is true with respect to the placement group?
+A. All instances must be in the same AZ
+B. All instances can be across multiple regions
+C. The placement group cannot have more than 5 instances
+D. All instances must be in the same region
+Answer: A
+Explanation:
+A placement group is a logical grouping of EC2 instances within a single Availability Zone. Using placement groups enables applications to participate in a lowlatency, 10 Gbps network. Placement groups are recommended for applications that benefit from low network latency, high network throughput or both.
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
+
+NEW QUESTION 45
+Which of the following AWS CLI commands is syntactically incorrect?
+1. $ aws ec2 describe-instances
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+2. $ aws ec2 start-instances --instance-ids i-1348636c
+3. $ aws sns publish --topic-arn arn:aws:sns:us-east-1:546419318123:OperationsError -message "Script Failure"
+4. $ aws sqs receive-message --queue-urI https://queue.amazonaws.com/546419318123/Test
+A. 3
+B. 4
+C. 2
+D. 1
+Answer: A
+Explanation:
+The following CLI command is missing a hyphen before "-message".
+aws sns publish --topic-arn arn:aws:sns:us-east-1:546419318123:OperationsError -message "Script Failure"
+It has been added below in red
+aws sns publish --topic-arn arn:aws:sns:us-east-1:546419318123:OperationsError ---message "Script Failure"
+Reference: http://aws.amazon.com/c|i/
+
+NEW QUESTION 48
+An organization has developed a mobile application which allows end users to capture a photo on their mobile device, and store it inside an application. The
+application internally uploads the data to AWS S3. The organization wants each user to be able to directly upload data to S3 using their Google ID. How will the
+mobile app allow this?
+A. Use the AWS Web identity federation for mobile applications, and use it to generate temporary security credentials for each user.
+B. It is not possible to connect to AWS S3 with a Google ID.
+C. Create an IAM user every time a user registers with their Google ID and use IAM to upload files to S3.
+D. Create a bucket policy with a condition which allows everyone to upload if the login ID has a Google part to it.
+Answer: A
+Explanation:
+For Amazon Web Services, the Web identity federation allows you to create cloud-backed mobile apps that use public identity providers, such as login with
+Facebook, Google, or Amazon. It will create temporary security credentials for each user, which will be authenticated by the AWS services, such as S3.
+Reference: http://docs.aws.amazon.com/STS/latest/UsingSTS/CreatingWIF.htmI
+
+NEW QUESTION 49
+You log in to IAM on your AWS console and notice the following message. "Delete your root access keys." Why do you think IAM is requesting this?
+A. Because the root access keys will expire as soon as you log out.
+B. Because the root access keys expire after 1 week.
+C. Because the root access keys are the same for all users.
+D. Because they provide unrestricted access to your AWS resource
+Answer: D
+Explanation:
+In AWS an access key is required in order to sign requests that you make using the command-line interface (CLI), using the AWS SDKs, or using direct API calls.
+Anyone who has the access key for your root account has unrestricted access to all the resources in your account, including billing information. One of the best
+ways to protect your account is to not have an access key for your root account. We recommend that unless you must have a root access key (this is very rare),
+that you do not generate one. Instead, AWS best practice is to create one or more AWS Identity and Access Management (IAM) users, give them the necessary
+permissions, and use IAM users for everyday interaction with AWS.
+Reference:
+http://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.htmI#root-password
+
+NEW QUESTION 53
+An existing client comes to you and says that he has heard that launching instances into a VPC (virtual private cloud) is a better strategy than launching instances
+into a EC2-classic which he knows is what you currently do. You suspect that he is correct and he has asked you to do some research about this and get back to
+him. Which of the following statements is true in regards to what ability launching your instances into a VPC instead of EC2-Classic gives you?
+A. All of the things listed here.
+B. Change security group membership for your instances while they're running
+C. Assign static private IP addresses to your instances that persist across starts and stops
+D. Define network interfaces, and attach one or more network interfaces to your instances
+Answer: A
+Explanation:
+By launching your instances into a VPC instead of EC2-Classic, you gain the ability to: Assign static private IP addresses to your instances that persist across
+starts and stops Assign multiple IP addresses to your instances
+Define network interfaces, and attach one or more network interfaces to your instances Change security group membership for your instances while they're
+running
+Control the outbound traffic from your instances (egress filtering) in addition to controlling the inbound traffic to them (ingress filtering)
+Add an additional layer of access control to your instances in the form of network access control lists (ACL)
+Run your instances on single-tenant hardware
+Reference: http://media.amazonwebservices.com/AWS_CIoud_Best_Practices.pdf
+
+NEW QUESTION 56
+Which of the following statements is true of creating a launch configuration using an EC2 instance?
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+A. The launch configuration can be created only using the Query APIs.
+B. Auto Scaling automatically creates a launch configuration directly from an EC2 instance.
+C. A user should manually create a launch configuration before creating an Auto Scaling group.
+D. The launch configuration should be created manually from the AWS CL
+Answer: B
+Explanation:
+You can create an Auto Scaling group directly from an EC2 instance. When you use this feature, Auto Scaling automatically creates a launch configuration for you
+as well.
+Reference:
+http://docs.aws.amazon.com/AutoScaling/latest/DeveIoperGuide/create-Ic-with-instancelD.htmI
+
+NEW QUESTION 59
+You have been using T2 instances as your CPU requirements have not been that intensive. However you now start to think about larger instance types and start
+looking at M and IV|3 instances. You are a little confused as to the differences between them as they both seem to have the same ratio of CPU and memory.
+Which statement below is incorrect as to why you would use one over the other?
+A. M3 instances are less expensive than M1 instances.
+B. IV|3 instances are configured with more swap memory than M instances.
+C. IV|3 instances provide better, more consistent performance that M instances for most use-cases.
+D. M3 instances also offer SSD-based instance storage that delivers higher I/O performanc
+Answer: B
+Explanation:
+Amazon EC2 allows you to set up and configure everything about your instances from your operating system up to your applications. An Amazon Nlachine Image
+(AMI) is simply a packaged-up environment that includes all the necessary bits to set up and boot your instance.
+M1 and M3 Standard instances have the same ratio of CPU and memory, some reasons below as to why you would use one over the other.
+IV|3 instances provide better, more consistent performance that M instances for most use-cases. M3 instances also offer SSD-based instance storage that delivers
+higher I/O performance.
+M3 instances are also less expensive than M1 instances. Due to these reasons, we recommend M3 for applications that require general purpose instances with a
+balance of compute, memory, and network resources.
+However, if you need more disk storage than what is provided in M3 instances, you may still find M1 instances useful for running your applications.
+Reference: https://aws.amazon.com/ec2/faqs/
+
+NEW QUESTION 64
+Which of the following strategies can be used to control access to your Amazon EC2 instances?
+A. DB security groups
+B. IAM policies
+C. None of these
+D. EC2 security groups
+Answer: D
+Explanation:
+IAM policies allow you to specify what actions your IAM users are allowed to perform against your EC2 Instances. However, when it comes to access control,
+security groups are what you need in order to define and control the way you want your instances to be accessed, and whether or not certain kind of
+communications are allowed or not.
+Reference: http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/UsingIAM.htmI
+
+NEW QUESTION 66
+A user has launched one EC2 instance in the US East region and one in the US West region. The user has launched an RDS instance in the US East region. How
+can the user configure access from both the EC2 instances to RDS?
+A. It is not possible to access RDS of the US East region from the US West region
+B. Configure the US West region’s security group to allow a request from the US East region’s instance and configure the RDS security group’s ingress rule for
+the US East EC2 group
+C. Configure the security group of the US East region to allow traffic from the US West region’s instance and configure the RDS security group’s ingress rule for
+the US East EC2 group
+D. Configure the security group of both instances in the ingress rule of the RDS security group
+Answer: C
+Explanation:
+The user cannot authorize an Amazon EC2 security group if it is in a different AWS Region than the RDS
+DB instance. The user can authorize an IP range or specify an Amazon EC2 security group in the same region that refers to an IP address in another region. In
+this case allow IP of US West inside US East’s security group and open the RDS security group for US East region.
+Reference: http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithSecurityGroups.html
+
+NEW QUESTION 69
+You have just set up a large site for a client which involved a huge database which you set up with Amazon RDS to run as a Mu|ti-AZ deployment. You now start to
+worry about what will happen if the database instance fails. Which statement best describes how this database will function if there is a database failure?
+A. Updates to your DB Instance are synchronously replicated across Availability Zones to the standby in order to keep both in sync and protect your latest
+database updates against DB Instance failure.
+B. Your database will not resume operation without manual administrative intervention.
+C. Updates to your DB Instance are asynchronously replicated across Availability Zones to the standby in order to keep both in sync and protect your latest
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+database updates against DB Instance failure.
+D. Updates to your DB Instance are synchronously replicated across S3 to the standby in order to keep both in sync and protect your latest database updates
+against DB Instance failure.
+Answer: A
+Explanation:
+Amazon Relational Database Service (Amazon RDS) is a managed service that makes it easy to set up, operate, and scale a relational database in the cloud. It
+provides cost-efficient and resizable capacity, while managing time-consuming database administration tasks, freeing you up to focus on your applications and
+business.
+When you create or modify your DB Instance to run as a MuIti-AZ deployment, Amazon RDS automatically provisions and maintains a synchronous "standby"
+replica in a different Availability Zone. Updates to your DB Instance are synchronously replicated across Availability Zones to the standby in order to keep both in
+sync and protect your latest database updates against DB Instance failure.
+During certain types of planned maintenance, or in the unlikely event of DB Instance failure or Availability Zone failure, Amazon RDS will automatically failover to
+the standby so that you can resume database writes and reads as soon as the standby is promoted. Since the name record for your DB Instance
+remains the same, you application can resume database operation without the need for manual administrative intervention. With Mu|ti-AZ deployments, replication
+is transparent: you do not interact directly with the standby, and it cannot be used to serve read traffic. If you are using Amazon RDS for MySQL and are looking to
+scale read traffic beyond the capacity constraints of a single DB Instance, you can deploy one or more Read Replicas.
+Reference: http://aws.amazon.com/rds/faqs/
+
+NEW QUESTION 73
+While creating an Amazon RDS DB, your first task is to set up a DB that controls which IP address or EC2 instance can access your DB Instance.
+A. security token pool
+B. security token
+C. security pool
+D. security group
+Answer: D
+Explanation:
+While creating an Amazon RDS DB, your first task is to set up a DB Security Group that controls what IP addresses or EC2 instances have access to your DB
+Instance.
+Reference: http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_WorkingWithSecurityGroups.html
+
+NEW QUESTION 75
+After setting up an EC2 security group with a cluster of 20 EC2 instances, you find an error in the security group settings. You quickly make changes to the security
+group settings. When will the changes to the settings be effective?
+A. The settings will be effective immediately for all the instances in the security group.
+B. The settings will be effective only when all the instances are restarted.
+C. The settings will be effective for all the instances only after 30 minutes.
+D. The settings will be effective only for the new instances added to the security grou
+Answer: A
+Explanation:
+Amazon Redshift applies changes to a cluster security group immediately. So if you have associated the cluster security group with a cluster, inbound cluster
+access rules in the updated cluster security group apply immediately.
+Reference: http://docs.aws.amazon.com/redshift/latest/mgmt/working-with-security-groups.htm|
+
+NEW QUESTION 80
+Regarding Amazon Route 53, if your application is running on Amazon EC2 instances in two or more Amazon EC2 regions and if you have more than one Amazon
+EC2 instance in one or more regions, you can use to route traffic to the correct region and then use to route traffic to instances
+within the region, based on probabilities that you specify.
+A. weighted-based routing; alias resource record sets
+B. latency-based routing; weighted resource record sets
+C. weighted-based routing; weighted resource record sets
+D. latency-based routing; alias resource record sets
+Answer: B
+Explanation:
+Regarding Amazon Route 53, if your application is running on Amazon EC2 instances in two or more Amazon EC2 regions, and if you have more than one
+Amazon EC2 instance in one or more regions, you can use latency-based routing to route traffic to the correct region and then use weighted resource record sets
+to route traffic to instances within the region based on weights that you specify.
+Reference: http://docs.aws.amazon.com/Route53/Iatest/DeveIoperGuide/Tutorials.html
+
+NEW QUESTION 82
+What is the network performance offered by the c4.8xIarge instance in Amazon EC2?
+A. 20 Gigabit
+B. 10 Gigabit
+C. Very High but variable
+D. 5 Gigabit
+Answer: B
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+Explanation:
+Networking performance offered by the c4.8xIarge instance is 10 Gigabit. Reference: http://aws.amazon.com/ec2/instance-types/
+
+NEW QUESTION 86
+You are planning and configuring some EBS volumes for an application. In order to get the most performance out of your EBS volumes, you should attach them to
+an instance with enough to support your volumes.
+A. Redundancy
+B. Storage
+C. Bandwidth
+D. Memory
+Answer: C
+Explanation:
+When you plan and configure EBS volumes for your application, it is important to consider the configuration of the instances that you will attach the volumes to. In
+order to get the most performance out of your EBS volumes, you should attach them to an instance with enough bandwidth to support your volumes, such as an
+EBS-optimized instance or an instance with 10 Gigabit network connectMty. This is especially important when you use General Purpose (SSD) or Provisioned
+IOPS (SSD) volumes, or when you stripe multiple volumes together in a RAID configuration.
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-ec2-config.htmI
+
+NEW QUESTION 89
+How long does an AWS free usage tier EC2 last for?
+A. Forever
+B. 12 Months upon signup
+C. 1 Month upon signup
+D. 6 Months upon signup
+Answer: B
+Explanation:
+The AWS free usage tier will expire 12 months from the date you sign up. When your free usage expires or if your application use exceeds the free usage tiers,
+you simply pay the standard, pay-as-you-go service rates.
+Reference: http://aws.amazon.com/free/faqs/
+
+NEW QUESTION 94
+A user is hosting a website in the US West-1 region. The website has the highest client base from the Asia-Pacific (Singapore / Japan) region. The application is
+accessing data from S3 before serving it to client. Which of the below mentioned regions gives a better performance for S3 objects?
+A. Japan
+B. Singapore
+C. US East
+D. US West-1
+Answer: D
+Explanation:
+Access to Amazon S3 from within Amazon EC2 in the same region is fast. In this aspect, though the client base is Singapore, the application is being hosted in the
+US West-1 region. Thus, it is recommended that S3 objects be stored in the US-West-1 region.
+Reference: http://media.amazonwebservices.com/AWS_Storage_Options.pdf
+
+NEW QUESTION 99
+A user has created a CIoudFormation stack. The stack creates AWS services, such as EC2 instances, ELB, AutoScaIing, and RDS. While creating the stack it
+created EC2, ELB and AutoScaIing but failed to create RDS. What will C|oudFormation do in this scenario?
+A. Rollback all the changes and terminate all the created services
+B. It will wait for the user’s input about the error and correct the mistake after the input
+C. CIoudFormation can never throw an error after launching a few services since it verifies all the steps before launching
+D. It will warn the user about the error and ask the user to manually create RDS
+Answer: A
+Explanation:
+AWS CIoudFormation is an application management tool which provides application modeling, deployment, configuration, management and related actMties. The
+AWS CIoudFormation stack is a collection of AWS resources which are created and managed as a single unit when AWS CIoudFormation instantiates a template.
+If any of the services fails to launch, C|oudFormation will rollback all the changes and terminate or delete all the created services.
+Reference: http://aws.amazon.com/c|oudformation/faqs/
+
+NEW QUESTION 100
+In Amazon EC2, what is the limit of Reserved Instances per Availability Zone each month?
+A. 5
+B. 20
+C. 50
+D. 10
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+Answer: B
+Explanation:
+There are 20 Reserved Instances per Availability Zone in each month.
+Reference: http://docs.aws.amazon.com/generaI/latest/gr/aws_service_Iimits.html
+
+NEW QUESTION 102
+Mike is appointed as Cloud Consultant in Netcrak Inc. Netcrak has the following VPCs set-up in the US East Region:
+A VPC with CIDR block 10.10.0.0/16, a subnet in that VPC with CIDR block 10.10.1.0/24 A VPC with CIDR block 10.40.0.0/16, a subnet in that VPC with CIDR
+block 10.40.1.0/24
+Netcrak Inc is trying to establish network connection between two subnets, a subnet with CIDR block 10.10.1.0/24 and another subnet with CIDR block
+10.40.1.0/24. Which one of the following solutions should Mke recommend to Netcrak Inc?
+A. Create 2 Virtual Private Gateways and configure one with each VPC.
+B. Create one EC2 instance in each subnet, assign Elastic IPs to both instances, and configure a set up Site-to-Site VPN connection between both EC2 instances.
+C. Create a VPC Peering connection between both VPCs.
+D. Create 2 Internet Gateways, and attach one to each VP
+Answer: C
+Explanation:
+A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IP addresses. EC2
+instances in either VPC can communicate with each other as if they are within the same network. You can create a VPC peering connection between your own
+VPCs, or with a VPC in another AWS account within a single region.
+AWS uses the existing infrastructure of a VPC to create a VPC peering connection; it is neither a gateway nor a VPN connection, and does not rely on a separate
+piece of physical hardware.
+Reference: http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/vpc-peering.htm|
+
+NEW QUESTION 103
+You need to set up security for your VPC and you know that Amazon VPC provides two features that you can use to increase security for your VPC: Security
+groups and network access control lists (ACLs). You start to look into security groups first. Which statement below is incorrect in relation to security groups?
+A. Are stateful: Return traffic is automatically allowed, regardless of any rules.
+B. Evaluate all rules before deciding whether to allow traffic.
+C. Support allow rules and deny rules.
+D. Operate at the instance level (first layer of defense).
+Answer: C
+Explanation:
+Amazon VPC provides two features that you can use to increase security for your VPC:
+Security groups—Act as a firewall for associated Amazon EC2 instances, controlling both inbound and outbound traffic at the instance level and supports allow
+rules only.
+Network access control lists (ACLs)—Act as a firewall for associated subnets, controlling both inbound and outbound traffic at the subnet level and supports allow
+rules and deny rules.
+Reference: http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Security.html
+
+NEW QUESTION 104
+In relation to AWS CIoudHSM, High-availability (HA) recovery is hands-off resumption by failed HA group members.
+Prior to the introduction of this function, the HA feature provided redundancy and performance, but required that a failed/lost group member be reinstated.
+A. automatically
+B. periodically
+C. manually
+D. continuosly
+Answer: C
+Explanation:
+In relation to AWS CIoudHS|VI, High-availability (HA) recovery is hands-off resumption by failed HA group members.
+Prior to the introduction of this function, the HA feature provided redundancy and performance, but required that a failed/lost group member be manually
+reinstated.
+Reference: http://docs.aws.amazon.com/cloudhsm/latest/userguide/ha-best-practices.html
+
+NEW QUESTION 108
+A for a VPC is a collection of subnets (typically private) that you may want to designate for your backend RDS DB Instances.
+A. DB Subnet Set
+B. RDS Subnet Group
+C. DB Subnet Group
+D. DB Subnet Collection
+Answer: C
+Explanation:
+DB Subnet Groups are a set of subnets (one per Availability Zone of a particular region) designed for your DB instances that reside in a VPC. They make easy to
+manage Multi-AZ deployments as well as the conversion from a Single-AZ to a Mut|i-AZ one.
+Reference: http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Overview.RDSVPC.htmI
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+NEW QUESTION 110
+A government client needs you to set up secure cryptographic key storage for some of their extremely confidential data. You decide that the AWS CIoudHSM is
+the best service for this. However, there seem to be a few pre-requisites before this can happen, one of those being a security group that has certain ports open.
+Which of the following is correct in regards to those security groups?
+A. A security group that has port 22 (for SSH) or port 3389 (for RDP) open to your network.
+B. A security group that has no ports open to your network.
+C. A security group that has only port 3389 (for RDP) open to your network.
+D. A security group that has only port 22 (for SSH) open to your network.
+Answer: A
+Explanation:
+AWS CIoudHSM provides secure cryptographic key storage to customers by making hardware security modules (HSMs) available in the AWS cloud.
+AWS C|oudHSM requires the following environment before an HSM appliance can be provisioned. A virtual private cloud (VPC) in the region where you want the
+AWS CIoudHSM service.
+One private subnet (a subnet with no Internet gateway) in the VPC. The HSM appliance is provisioned into this subnet.
+One public subnet (a subnet with an Internet gateway attached). The control instances are attached to this subnet.
+An AWS Identity and Access Management (IAM) role that delegates access to your AWS resources to AWS CIoudHSM.
+An EC2 instance, in the same VPC as the HSM appliance, that has the SafeNet client software installed. This instance is referred to as the control instance and is
+used to connect to and manage the HSM appliance.
+A security group that has port 22 (for SSH) or port 3389 (for RDP) open to your network. This security group is attached to your control instances so you can
+access them remotely.
+
+NEW QUESTION 111
+A user has created an ELB with the availability zone US-East-1A. The user wants to add more zones to ELB to achieve High Availability. How can the user add
+more zones to the existing ELB?
+A. The user should stop the ELB and add zones and instances as required
+B. The only option is to launch instances in different zones and add to ELB
+C. It is not possible to add more zones to the existing ELB
+D. The user can add zones on the fly from the AWS console
+Answer: D
+Explanation:
+The user has created an Elastic Load Balancer with the availability zone and wants to add more zones to the existing ELB. The user can do so in two ways:
+From the console or CLI, add new zones to ELB;
+Launch instances in a separate AZ and add instances to the existing ELB. Reference:
+http://docs.aws.amazon.com/EIasticLoadBaIancing/latest/DeveIoperGuide/enable-disable-az.html
+
+NEW QUESTION 114
+What happens to data on an ephemeral volume of an EBS-backed EC2 instance if it is terminated or if it fails?
+A. Data is automatically copied to another volume.
+B. The volume snapshot is saved in S3.
+C. Data persists.
+D. Data is delete
+Answer: D
+Explanation:
+Any data on the instance store volumes persists as long as the instance is running, but this data is deleted when the instance is terminated or if it fails (such as if
+an underlying drive has issues). After an instance store-backed instance fails or terminates, it cannot be restored.
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/RootDeviceStorage.htmI
+
+NEW QUESTION 117
+AWS Identity and Access Management is a web service that enables Amazon Web Services (AWS) customers to manage users and user permissions in AWS. In
+addition to supporting IAM user policies, some services support resource-based permissions. Which of the following services are supported by
+resource-based permissions?
+A. Amazon SNS, and Amazon SQS and AWS Direct Connect.
+B. Amazon S3 and Amazon SQS and Amazon EIastiCache.
+C. Amazon S3, Amazon SNS, Amazon SQS, Amazon Glacier and Amazon EBS.
+D. Amazon Glacier, Amazon SNS, and Amazon CIoudWatch
+Answer: C
+Explanation:
+In addition to supporting IAM user policies, some services support resource-based permissions, which let you attach policies to the service's resources instead of
+to IAM users or groups. Resource-based permissions are supported by Amazon S3, Amazon SNS, Amazon SQS, Amazon Glacier and Amazon EBS.
+Reference: http://docs.aws.amazon.com/IAM/latest/UserGuide/Using_SpecificProducts.htm|
+
+NEW QUESTION 120
+A company wants to review the security requirements of Glacier. Which of the below mentioned statements is true with respect to the AWS Glacier data security?
+A. All data stored on Glacier is protected with AES-256 serverside encryption.
+B. All data stored on Glacier is protected with AES-128 serverside encryption.
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+C. The user can set the serverside encryption flag to encrypt the data stored on Glacier.
+D. The data stored on Glacier is not encrypted by defaul
+Answer: A
+Explanation:
+For Amazon Web Services, all the data stored on Amazon Glacier is protected using serverside encryption. AWS generates separate unique encryption keys for
+each Amazon Glacier archive, and encrypts it using AES-256. The encryption key then encrypts itself using AES-256 with a master key that is stored in a secure
+location.
+Reference: http://media.amazonwebservices.com/AWS_Security_Best_Practices.pdf
+
+NEW QUESTION 122
+You are playing around with setting up stacks using JSON templates in C|oudFormation to try and understand them a little better. You have set up about 5 or 6 but
+now start to wonder if you are being charged for these stacks. What is AWS's billing policy regarding stack resources?
+A. You are not charged for the stack resources if they are not taking any traffic.
+B. You are charged for the stack resources for the time they were operating (even if you deleted the stack right away)
+C. You are charged for the stack resources for the time they were operating (but not if you deleted the stack within 60 minutes)
+D. You are charged for the stack resources for the time they were operating (but not if you deleted the stack within 30 minutes)
+Answer: B
+Explanation:
+A stack is a collection of AWS resources that you can manage as a single unit. In other words, you can create, update, or delete a collection of resources by
+creating, updating, or deleting stacks. All the resources in a stack are defined by the stack's AWS CIoudFormation template. A stack, for instance, can include all
+the resources required to run a web application, such as a web server, a database, and networking rules. If you no longer require that web application, you can
+simply delete the stack, and all of its related resources are deleted.
+You are charged for the stack resources for the time they were operating (even if you deleted the stack right away).
+Reference: http://docs.aws.amazon.com/AWSCIoudFormation/latest/UserGuide/stacks.html
+
+NEW QUESTION 127
+You have been given a scope to set up an AWS Media Sharing Framework for a new start up photo
+sharing company similar to flickr. The first thing that comes to mind about this is that it will obviously need a huge amount of persistent data storage for this
+framework. Which of the following storage options would be appropriate for persistent storage?
+A. Amazon Glacier or Amazon S3
+B. Amazon Glacier or AWS Import/Export
+C. AWS Import/Export or Amazon C|oudFront
+D. Amazon EBS volumes or Amazon S3
+Answer: D
+Explanation:
+Persistent storage-If you need persistent virtual disk storage similar to a physical disk drive for files or other data that must persist longer than the lifetime of a
+single Amazon EC2 instance, Amazon EBS volumes or Amazon S3 are more appropriate.
+Reference: http://media.amazonwebservices.com/AWS_Storage_Options.pdf
+
+NEW QUESTION 130
+In Route 53, what does a Hosted Zone refer to?
+A. A hosted zone is a collection of geographical load balancing rules for Route 53.
+B. A hosted zone is a collection of resource record sets hosted by Route 53.
+C. A hosted zone is a selection of specific resource record sets hosted by CIoudFront for distribution to Route 53.
+D. A hosted zone is the Edge Location that hosts the Route 53 records for a use
+Answer: B
+Explanation:
+A Hosted Zone refers to a selection of resource record sets hosted by Route 53.
+Reference: http://docs.aws.amazon.com/Route53/Iatest/DeveIoperGuide/AboutHostedZones.html
+
+NEW QUESTION 135
+George has launched three EC2 instances inside the US-East-1a zone with his AWS account. Ray has launched two EC2 instances in the US-East-Ia zone with
+his AWS account. Which of the below mentioned statements will help George and Ray understand the availability zone (AZ) concept better?
+A. All the instances of George and Ray can communicate over a private IP with a minimal cost
+B. The US-East-1a region of George and Ray can be different availability zones
+C. All the instances of George and Ray can communicate over a private IP without any cost
+D. The instances of George and Ray will be running in the same data centre
+Answer: B
+Explanation:
+Each AWS region has multiple, isolated locations known as Availability Zones. To ensure that the AWS resources are distributed across the Availability Zones for a
+region, AWS independently maps the Availability Zones to identifiers for each account. In this case the Availability Zone US-East-Ia where George’s EC2
+instances are running might not be the same location as the US-East-Ia zone of Ray’s EC2 instances. There is no way for the user to coordinate the Availability
+Zones between accounts.
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+NEW QUESTION 139
+In Amazon EC2, you are billed instance-hours when .
+A. your EC2 instance is in a running state
+B. the instance exits from Amazon S3 console
+C. your instance still exits the EC2 console
+D. EC2 instances stop
+Answer: A
+Explanation:
+You are billed instance-hours as long as your EC2 instance is in a running state. Reference: http://aws.amazon.com/ec2/faqs/
+
+NEW QUESTION 144
+A user has created an ELB with Auto Scaling. Which of the below mentioned offerings from ELB helps the
+user to stop sending new requests traffic from the load balancer to the EC2 instance when the instance is being deregistered while continuing in-flight requests?
+A. ELB sticky session
+B. ELB deregistration check
+C. ELB auto registration Off
+D. ELB connection draining
+Answer: D
+Explanation:
+The Elastic Load Balancer connection draining feature causes the load balancer to stop sending new requests to the back-end instances when the instances are
+deregistering or become unhealthy, while ensuring that in-flight requests continue to be served.
+Reference:
+http://docs.aws.amazon.com/EIasticLoadBaIancing/latest/DeveIoperGuide/config-conn-drain.htmI
+
+NEW QUESTION 145
+You have some very sensitive data stored on AWS S3 and want to try every possible alternative to keeping it secure in regards to access control. What are the
+mechanisms available for access control on AWS S3?
+A. (IAM) policies, Access Control Lists (ACLs), bucket policies, and query string authentication.
+B. (IAM) policies, Access Control Lists (ACLs) and bucket policies.
+C. Access Control Lists (ACLs), bucket policies, and query string authentication
+D. (IAM) policies, Access Control Lists (ACLs), bucket policies, query string authentication and encryption.
+Answer: A
+Explanation:
+Amazon S3 supports several mechanisms that give you filexibility to control who can access your data as well as how, when, and where they can access it.
+Amazon S3 provides four different access control mechanisms:
+AWS Identity and Access Management (IAM) policies, Access Control Lists (ACLs), bucket policies, and query string authentication.
+IAM enables organizations to create and manage multiple users under a single AWS account. With IAM policies, you can grant IAM users fine-grained control to
+your Amazon S3 bucket or objects. You can use ACLs to selectively add (grant) certain permissions on indMdual objects.
+Amazon S3 bucket policies can be used to add or deny permissions across some or all of the objects within a single bucket.
+With Query string authentication, you have the ability to share Amazon S3 objects through URLs that are valid for a specified period of time.
+
+NEW QUESTION 147
+Your manager has come to you saying that he is very confused about the bills he is receMng from AWS as he is getting different bills for every user and needs you
+to look into making it more understandable. Which of the following would be the best solution to meet his request?
+A. AWS Billing Aggregation
+B. Consolidated Billing
+C. Deferred Billing
+D. Aggregated Billing
+Answer: B
+Explanation:
+Consolidated Billing enables you to consolidate payment for multiple AWS accounts within your company by designating a single paying account. Consolidated
+Billing enables you to see a combined view of AWS costs incurred by all accounts, as well as obtain a detailed cost report for each of the indMdual AWS accounts
+associated with your "Paying Account". Consolidated Billing is offered at no additional charge. Reference: https://aws.amazon.com/bi|Iing/faqs/
+
+NEW QUESTION 151
+A user is planning to host a mobile game on EC2 which sends notifications to active users on either high score or the addition of new features. The user should get
+this notification when he is online on his mobile device. Which of the below mentioned AWS services can help achieve this functionality?
+A. AWS Simple Notification Service.
+B. AWS Simple Email Service.
+C. AWS Nlobile Communication Service.
+D. AWS Simple Queue Service.
+Answer: A
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+Explanation:
+Amazon Simple Notification Service (Amazon SNS) is a fast, filexible, and fully managed push messaging service. Amazon SNS makes it simple and cost-effective
+to push to mobile devices, such as iPhone, iPad, Android, Kindle Fire, and internet connected smart devices, as well as pushing to other distributed services.
+Reference: http://aws.amazon.com/sns
+
+NEW QUESTION 153
+A user has hosted an application on EC2 instances. The EC2 instances are configured with ELB and Auto Scaling. The application server session time out is 2
+hours. The user wants to configure connection draining to ensure that all in-flight requests are supported by ELB even though the instance is being deregistered.
+What time out period should the user specify for connection draining?
+A. 1 hour
+B. 30 minutes
+C. 5 minutes
+D. 2 hours
+Answer: A
+Explanation:
+The Elastic Load Balancer connection draining feature causes the load balancer to stop sending new requests to the back-end instances when the instances are
+deregistering or become unhealthy, while ensuring that in-flight requests continue to be served. The user can specify a maximum time of 3600
+seconds (1 hour) for the load balancer to keep the connections alive before reporting the instance as deregistered. If the user does not specify the maximum
+timeout period, by default, the load balancer will close the connections to the deregistering instance after 300 seconds.
+Reference:
+http://docs.aws.amazon.com/EIasticLoadBaIancing/latest/DeveIoperGuide/config-conn-drain.htmI
+
+NEW QUESTION 156
+In Amazon EC2, how many Elastic IP addresses can you have by default?
+A. 10
+B. 2
+C. 5
+D. 20
+Answer: C
+Explanation:
+The number of Elastic IP addresses you can have in EC2 is 5.
+Reference: http://docs.aws.amazon.com/generaI/latest/gr/aws_service_Iimits.htmI#|imits_ec2
+
+NEW QUESTION 161
+After deciding that EMR will be useful in analysing vast amounts of data for a gaming website that you are architecting you have just deployed an Amazon EMR
+Cluster and wish to monitor the cluster performance. Which of the following tools cannot be used to monitor the cluster performance?
+A. Kinesis
+B. Ganglia
+C. C|oudWatch Metrics
+D. Hadoop Web Interfaces
+Answer: A
+Explanation:
+Amazon EMR provides several tools to monitor the performance of your cluster. Hadoop Web Interfaces
+Every cluster publishes a set of web interfaces on the master node that contain information about the cluster. You can access these web pages by using an SSH
+tunnel to connect them on the master node. For more information, see View Web Interfaces Hosted on Amazon EMR Clusters.
+CIoudWatch Metrics
+Every cluster reports metrics to CIoudWatch. CIoudWatch is a web service that tracks metrics, and which you can use to set alarms on those metrics. For more
+information, see Monitor Metrics with CIoudWatch. Ganglia
+Ganglia is a cluster monitoring tool. To have this available, you have to install Ganglia on the cluster when you launch it. After you've done so, you can monitor the
+cluster as it runs by using an SSH tunnel to connect to the Ganglia UI running on the master node. For more information, see Monitor Performance with Ganglia.
+Reference:
+http://docs.aws.amazon.com/EIasticMapReduce/latest/DeveIoperGuide/emr-troubleshoot-tooIs.htmI
+
+NEW QUESTION 166
+Can you move a Reserved Instance from one Availability Zone to another?
+A. Yes, but each Reserved Instance is associated with a specific Region that cannot be changed.
+B. Yes, only in US-West-2.
+C. Yes, only in US-East-1.
+D. No
+Answer: A
+Explanation:
+Each Reserved Instance is associated with a specific Region, which is fixed for the lifetime of the reservation and cannot be changed. Each reservation can,
+however, be used in any of the available AZs within the associated Region.
+Reference: https://aws.amazon.com/rds/faqs/
+
+NEW QUESTION 169
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+An application hosted at the EC2 instance receives an HTTP request from ELB. The same request has an X-Forvvarded-For header, which has three IP
+addresses. Which system's IP will be a part of this header?
+A. Previous Request IP address.
+B. Client IP address.
+C. All of the answers listed here.
+D. Load Balancer IP addres
+Answer: C
+Explanation:
+When a user sends a request to ELB over HTTP/HTTPS, the request header log at the instance will only receive the IP of ELB. This is because ELB is the
+interceptor between the EC2 instance and the client request. To get the client IP, use the header X-Forvvarded-For in header. The client IP address in the
+X-Fonzvarded-For request header is followed by the IP addresses of each successive proxy that passes along the request. The last IP address is the IP address
+that connects to the back-end application instance. e.g. if the HTTP request already has a header when it reaches the Load Balancer, the IP address from which
+the request came is appended at the end of the header followed by the IP address of the Load Balancer. In such cases, the X-Forvvarded-For request header
+takes the following form:
+X-Fonzvarded-For: cIientIPAddress, previousRequestIPAddress, LoadBaIancerIPAddress. Reference:
+http://docs.aws.amazon.com/E|asticLoadBaIancing/Iatest/DeveIoperGuide/TerminologyandKeyConcepts. html
+
+NEW QUESTION 172
+When controlling access to Amazon EC2 resources, each Amazon EBS Snapshot has a attribute that controls which AWS accounts can use the snapshot.
+A. createVoIumePermission
+B. LaunchPermission
+C. SharePermission
+D. RequestPermission
+Answer: A
+Explanation:
+Each Amazon EBS Snapshot has a createVoIumePermission attribute that you can set to one or more AWS Account IDs to share the AM with those AWS
+Accounts. To allow several AWS Accounts to use a particular EBS snapshot, you can use the snapshots's createVoIumePermission attribute to include a list of the
+accounts that can use it.
+Reference: http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/UsingIAM.html
+
+NEW QUESTION 177
+Your company has HQ in Tokyo and branch offices all over the world and is using a logistics software with a multi-regional deployment on AWS in Japan, Europe
+and USA, The logistic software has a 3- tier architecture and currently uses MySQL 5.6 for data persistence. Each region has deployed its own database
+In the HQ region you run an hourly batch process reading data from every region to compute cross regional reports that are sent by email to all offices this batch
+process must be completed as fast as possible to quickly optimize logistics how do you build the database architecture in order to meet the requirements'?
+A. For each regional deployment, use RDS MySQL with a master in the region and a read replica in the HQ region
+B. For each regional deployment, use MySQL on EC2 with a master in the region and send hourly EBS snapshots to the HQ region
+C. For each regional deployment, use RDS MySQL with a master in the region and send hourly RDS snapshots to the HQ region
+D. For each regional deployment, use MySQL on EC2 with a master in the region and use 53 to copy data files hourly to the HQ region
+E. Use Direct Connect to connect all regional MySQL deployments to the HQ region and reduce network latency for the batch process
+Answer: A
+
+NEW QUESTION 180
+Company B is launching a new game app for mobile devices. Users will log into the game using their existing social media account to streamline data capture.
+Company B would like to directly save player data and scoring information from the mobile app to a DynamoDS table named Score Data
+When a user saves their game the progress data will be stored to the Game state 53 bucket. What is the best approach for storing data to DynamoDB and 53?
+A. Use an EC2 Instance that is launched with an EC2 role providing access to the Score Data DynamoDB table and the GameState 53 bucket that communicates
+with the mobile app via web services.
+B. Use temporary security credentials that assume a role providing access to the Score Data DynamoDB table and the Game State 53 bucket using web identity
+federation.
+C. Use Login with Amazon allowing users to sign in with an Amazon account providing the mobile app with access to the Score Data DynamoDB table and the
+Game State 53 bucket.
+D. Use an IAM user with access credentials assigned a role providing access to the Score Data DynamoDB table and the Game State 53 bucket for distribution
+with the mobile app.
+Answer: B
+Explanation:
+Web Identity Federation
+Imagine that you are creating a mobile app that accesses AWS resources, such as a game that runs on a mobile device and stores player and score information
+using Amazon 53 and DynamoDB. When you write such an app, you'II make requests to AWS services that must be signed with an AWS access key. However,
+we strongly recommend that you do not embed or distribute long-term AWS credentials with apps that a user downloads to a device, even in an encrypted store.
+Instead, build your app so that it requests temporary AWS security credentials dynamically when needed using web identity federation. The supplied temporary
+credentials map to an AWS role that has only the permissions needed to perform
+the tasks required by the mobile app.
+With web identity federation, you don't need to create custom sign-in code or manage your own user identities. Instead, users of your app can sign in using a wellknown identity provider (IdP) - such as Login with Amazon, Facebook, Google, or any other OpenID Connect (OIDC)-compatible IdP, receive an authentication
+token, and then exchange that token for temporary security credentials in AWS that map to an IAM role with permissions to use the resources in your AWS
+account. Using an IdP helps you keep your AWS account secure, because you don't have to embed and distribute longterm security credentials with your
+application.
+For most scenarios, we recommend that you use Amazon Cognito because it acts as an identity broker and does much of the federation work for you. For details,
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+see the following section, Using Amazon Cognito for MobiIe Apps.
+If you don't use Amazon Cognito, then you must write code that interacts with a web IdP (Login with Amazon, Facebook, Google, or any other OIDC-compatible
+IdP) and then calls the Assume Role With Web Identity API to trade the authentication token you get from those IdPs for AWS temporary security credentials. If
+you have already used this approach for existing apps, you can continue to use it.
+Using Amazon Cognito for Nlobile Apps
+The preferred way to use web identity federation is to use Amazon Cognito. For example, Adele the developer is building a game for a mobile device where user
+data such as scores and profiles is stored in Amazon 53 and Amazon DynamoDB. Adele could also store this data locally on the device and use Amazon Cognito
+to keep it synchronized across devices. She knows that for security and maintenance reasons, long-term AWS security credentials should not be distributed with
+the game. She also knows that the game might have a large number of users. For all of these reasons, she does not want to create new user identities in IAM for
+each player. Instead, she builds the game so that users can sign in using an identity that they've already established with a well-known identity provider, such as
+Login with Amazon, Facebook, Google, or any OpenID Connect {OIDC)-compatible identity provider.
+Her game can take advantage of the authentication mechanism from one of these providers to validate the user's identity.
+To enable the mobile app to access her AWS resources, Adele first registers for a developer 10 with her chosen IdPs. She also configures the application with
+each of these providers. In her AWS account that contains the Amazon 53 bucket and DynamoDB table for the game, Adele uses Amazon Cognito to create IAM
+roles that precisely define permissions that the game needs. If she is using an OIDC IdP, she also creates an IAM OIDC identity provider entity to establish t rust
+between her AWS account and the IdP.
+In the app's code, Adele calls the sign-in interface for the IdP that she configured previously. The IdP handles all the details of letting the user sign in, and the app
+gets an OAuth access token or OIDC ID token from the provider. AdeIe's app can trade this authentication information for a set of temporary security credentials
+that consist of an AWS access key 10, a secret access key, and a session token.
+The app can then use these credentials to access web services offered by AWS. The app is limited to the permissions that are defined in the role that it assumes.
+The following figure shows a simplified flow for how this might work, using Login with Amazon as the IdP.
+For Step 2, the app can also use Facebook, Google, or any OIDC-compatible identity provider, but that's not shown here.
+Sample workflow using Amazon Cognito to federate users for a mobile application
+
+A customer starts your app on a mobile device. The app asks the user to sign in. The app uses Login with Amazon resources to accept the user's credentials.
+The app uses Cognito APIs to exchange the Login with Amazon 10 token for a Cognito token. The app requests temporary security credentials from AWS STS,
+passing the Cognito token.
+The temporary security credentials can be used by the app to access any AWS resources required by the app to operate. The role associated with the temporary
+security credentials and its assigned policies determines what can be accessed.
+Use the following process to configure your app to use Amazon Cognito to authenticate users and give your app access to AWS resources. For specific steps to
+accomplish this scenario, consult the documentation for Amazon Cognito.
+(Optional) Sign up as a developer with Login with Amazon, Facebook, Google, or any other OpenID Connect (OIDC}-compatible identity provider and configure
+one or more apps with the provider. This step is optional because Amazon Cognito also supports unauthenticated (guest) access for your users.
+Go to Amazon Cognito in the AWS IV|anagement Console. Use the Amazon Cognito wizard to create an identity pool, which is a container that Amazon Cognito
+uses to keep end user identities organized for your apps. You can share identity pools between apps. When you set up an identity pool, Amazon Cognito creates
+one or two IAM roles (one for authenticated identities, and one for unauthenticated "guest" identities) that define permissions for Amazon Cognito users.
+Download and integrate the AWS SDK for iOS or the AWS SDK for Android with your app, and import the files required to use Amazon Cognito.
+Create an instance of the Amazon Cognito credentials provider, passing the identity pool ID, your AWS account number, and the Amazon Resource Name (ARN)
+of the ro les that you associated with the identity pool. The Amazon Cognito wizard in the AWS Management Console provides sample code to help you get
+started.
+When your app accesses an AWS resource, pass the credentials provider instance to the client object, which passes temporary security credentials to the client.
+The permissions for the credentials are based on the role or roles that you defined earlier.
+
+NEW QUESTION 185
+You have been asked to design the storage layer for an application. The application requires disk
+performance of at least 100,000 IOPS in addition, the storage layer must be able to survive the loss of an indMdual disk. EC2 instance, or Availability Zone without
+any data loss. The volume you provide must have a capacity of at least 3 TB. Which of the following designs will meet these objectives'?
+A. Instantiate a c3.8x|arge instance in us-east-1. Provision 4x1TB EBS volumes, attach them to the instance, and configure them as a single RAID 5 volum
+B. Ensure that EBS snapshots are performed every 15 minutes.
+C. Instantiate a c3.8xIarge instance in us-east-1. Provision 3xiTB EBS volumes, attach them to the Instance, and configure them as a single RAID 0 volum
+D. Ensure that EBS snapshots are performed every 15 minutes.
+E. Instantiate an i2.8xIarge instance in us-east-I
+F. Create a RAID 0 volume using the four 800GB SSD ephemeral disks provided with the instanc
+G. Provision 3x1TB EBS volumes, attach them to the instance, and configure them as a second RAID 0 volum
+H. Configure synchronous, block-level replication from the ephemeral-backed volume to the EBS-backed volume.
+I. Instantiate a c3.8xIarge instance in us-east-1. Provision an AWS Storage Gateway and configure it for 3 TB of storage and 100,000 IOP
+J. Attach the volume to the instanc
+K. Instantiate an i2.8x|arge instance in us-east-I
+L. Create a RAID 0 volume using the four 800GB SSD ephemeral disks provided with the instanc
+M. Configure synchronous, block- level replication to an identically configured instance inus-east-I
+Answer: C
+
+NEW QUESTION 188
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+You would like to create a mirror image of your production environment in another region for disaster recovery purposes. Which of the following AWS resources do
+not need to be recreated in the second region? (Choose 2 answers)
+A. Route 53 Record Sets
+B. IM Roles
+C. Elastic IP Addresses (EIP)
+D. EC2 Key Pairs
+E. Launch configurations
+F. Security Groups
+Answer: AC
+Explanation:
+Reference:
+http://tech.com/wp-content/themes/optimize/download/AWSDisaster_Recovery.pdf (page 6)
+
+NEW QUESTION 190
+Your company runs a customer facing event registration site This site is built with a 3-tier architecture with web and application tier servers and a MySQL database
+The application requires 6 web tier servers and 6 application tier servers for normal operation, but can run on a minimum of 65% server capacity and a single
+MySQL database. When deploying this application in a region with three availability zones (AZs) which architecture provides high availability?
+A. A web tier deployed across 2 AZs with 3 EC2 (Elastic Compute Cloud) instances in each AZ inside an Auto Scaling Group behind an ELB (elastic load
+balancer), and an application tier deployed across 2 AZs with 3 EC2 instances in each AZ inside an Auto Scaling Group behind an ELB, and one RDS (Relational
+Database Service) instance deployed with read replicas in the other AZ.
+B. A web tier deployed across 3 AZs with 2 EC2 (Elastic Compute Cloud) instances in each AZ inside an Auto Scaling Group behind an ELB (elastic load balancer)
+and an application tier deployed across 3 AZs with 2 EC2 instances in each AZ inside an Auto Scaling Group behind an ELB and one RDS (Relational Database
+Service) Instance deployed with read replicas in the two other AZs.
+C. A web tier deployed across 2 AZs with 3 EC2 (Elastic Compute Cloud) instances in each AZ inside an Auto Scaling Group behind an ELB (elastic load
+balancer) and an application tier deployed across 2 AZs with 3 EC2 instances m each AZ inside an Auto Scaling Group behind an ELS and a Multi-AZ RDS
+(Relational Database Service) deployment.
+D. A web tier deployed across 3 AZs with 2 EC2 (Elastic Compute Cloud) instances in each AZ Inside an Auto Scaling Group behind an ELB (elastic load
+balancer). And an application tier deployed across 3 AZs with 2 EC2 instances in each AZ inside an Auto Scaling Group behind an EL
+E. And a MuIti-AZ RDS (Relational Database services) deployment.
+Answer: D
+Explanation:
+Amazon RDS MuIti-AZ Deployments
+Amazon RDS Multi-AZ deployments provide enhanced availability and durability for Database (DB) Instances, making them a natural fit for production database
+workloads. When you provision a MuIti-AZ DB Instance, Amazon RDS automatically creates a primary DB Instance and synchronously replicates the data to a
+standby instance in a different Availability Zone (AZ). Each AZ runs on its own physically distinct, independent infrastructure, and is engineered to be highly
+reliable. In case of an infrastructure failure (for example, instance hardware failure, storage failure, or network disruption), Amazon RDS performs an automatic
+failover to the standby, so that you can resume database operations as soon as the failover is complete. Since the endpoint for your DB Instance remains the
+same after a failover, your application can resume database operation without the need for manual administrative intervention.
+Enhanced Durability
+MuIti-AZ deployments for the MySQL, Oracle, and PostgreSQL engines utilize synchronous physical replication to keep data on the standby up-to-date with the
+primary. MuIti-AZ deployments for the SQL Server engine use synchronous logical replication to achieve the same result, employing SQL
+Server-native Mrroring technology. Both approaches safeguard your data in the event of a DB Instance failure or loss of an Availability Zone.
+If a storage volume on your primary fails in a Multi-AZ deployment, Amazon RDS automatically initiates a failover to the up-to-date standby. Compare this to a
+Single-AZ deployment: in case of a Single-AZ database failure, a user-initiated point-in-time-restore operation will be required. This operation can take several
+hours to complete, and any data updates that occurred after the latest restorable time (typically within the last five minutes) will not be available.
+Amazon Aurora employs a highly durable, SSD-backed virtualized storage layer purpose-built for database workloads. Amazon Aurora automatically replicates
+your volume six ways, across three Availability Zones. Amazon Aurora storage is fault-tolerant, transparently handling the loss of up to two copies of data without
+affecting database write availability and up to three copies without affecting read availability. Amazon Aurora storage is also self-healing. Data blocks and disks are
+continuously scanned for errors and replaced automatically.
+Increased Availability
+You also benefit from enhanced database availability when running Multi-AZ deployments. If an Availability Zone failure or DB Instance failure occurs, your
+availability impact is limited to the time automatic failover takes to complete: typically under one minute for Amazon Aurora and one to two minutes for other
+database engines (see the RDS FAQ for details).
+The availability benefits of MuIti-AZ deployments also extend to planned maintenance and backups. In the case of system upgrades like QS patching or DB
+Instance scaling, these operations are applied first on
+the standby, prior to the automatic failover. As a result, your availability impact is, again, only the time required for automatic failover to complete.
+Unlike Single-AZ deployments, 1/0 actMty is not suspended on your primary during backup for MuIti-AZ deployments for the MySQL, Oracle, and PostgreSQL
+engines, because the backup is taken from the standby. However, note that you may still experience elevated latencies for a few minutes during backups for MuItiAZ deployments.
+On instance failure in Amazon Aurora deployments, Amazon RDS uses RDS MuIti-AZ technology to automate failover to one of up to 15 Amazon Aurora Replicas
+you have created in any of three Availability Zones. If no Amazon Aurora Replicas have been provisioned, in the case of a failure, Amazon RDS will attempt to
+create a new Amazon Aurora DB instance for you automatically.
+
+NEW QUESTION 195
+Your application is using an ELB in front of an Auto Scaling group of web/application sewers deployed across two AZs and a MuIti-AZ RDS Instance for data
+persistence.
+The database CPU is often above 80% usage and 90% of 1/0 operations on the database are reads. To improve performance you recently added a single-node
+Memcached EIastiCache Cluster to cache frequent DB query results. In the next weeks the overall workload is expected to grow by 30%.
+Do you need to change anything in the architecture to maintain the high availability or the application with the anticipated additional load? Why?
+A. Yes, you should deploy two Memcached EIastiCache Clusters in different AZs because the RDS instance will not be able to handle the load if the cache node
+fails.
+B. No, if the cache node fails you can always get the same data from the DB without having any availability impact.
+C. No, if the cache node fails the automated EIastiCache node recovery feature will prevent any availability impact.
+D. Yes, you should deploy the Memcached EIastiCache Cluster with two nodes in the same AZ as the RDS DB master instance to handle the load if one cache
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+node fails.
+Answer: A
+Explanation:
+EIastiCache for Memcached
+The primary goal of caching is typically to offload reads from your database or other primary data source. In most apps, you have hot spots of data that are
+regularly queried, but only updated periodically. Think of the front page of a blog or news site, or the top 100 leaderboard in an online game. In this type of case,
+your app can receive dozens, hundreds, or even thousands of requests for the same data before it's updated again. Having your caching layer handle these
+queries has several advantages. First, it's considerably cheaper to add an in-memory cache than to scale up to a larger database cluster. Second,
+an in-memory cache is also easier to scale out, because it's easier to distribute an in-memory cache horizontally than a relational database.
+Last, a caching layer provides a request buffer in the event of a sudden spike in usage. If your app or game ends up on the front page of Reddit or the App Store,
+it's not unheard of to see a spike that is 10 to 100 times your normal application load. Even if you autoscale your application instances, a IOx request spike will
+likely make your database very unhappy.
+Let's focus on EIastiCache for Memcached first, because it is the best fit for a caching focused solution. We'II revisit Redislater in the paper, and weigh its
+advantages and disadvantages.
+Architecture with EIastiCache for Memcached
+When you deploy an EIastiCache Memcached cluster, it sits in your application as a separate tier alongside your database. As mentioned previously, Amazon
+EIastiCache does not directly communicate with your database tier, or indeed have any particular knowledge of your database. A simplified deployment for a web
+application looks something like this:
+
+In this architecture diagram, the Amazon EC2 application instances are in an Auto Scaling group, located behind a load balancer using Elastic Load Balancing,
+which distributes requests among the instances. As requests come into a given EC2 instance, that EC2 instance is responsible for communicating with
+EIastiCache and the database tier. For development purposes, you can begin with a single EIastiCache node to test your application, and then scale to additional
+cluster nodes by modifying t he EIastiCache cluster. As you add additional cache nodes, the EC2 application instances are able to distribute cache keys across
+multiple EIastiCache nodes. The most common practice is to use client-side sharding to distribute keys across cache nodes, which we will discuss later in this
+paper.
+
+When you launch an EIastiCache cluster, you can choose the Availability Zone(s) that the cluster lives in. For best performance, you should configure your cluster
+to use the same Availability Zones as your application servers. To launch an EIastiCache cluster in a specific Availability Zone, make sure to specify the Preferred
+Zone(s) option during cache cluster creation. The Availability Zones that you specify will be where EIastiCache will launch your cache nodes. We recommend that
+you select Spread Nodes Across Zones, which tells EIastiCache to distribute cache nodes across these zones as evenly as possible. This distribution will mitigate
+the impact of an Availability Zone disruption on your E|astiCache nodes. The trade-off is that some of the requests from your application to EIastiCache will go to a
+node in a different Availability Zone, meaning latency will be slightly higher.
+For more details, refer to Creating a Cache Cluster in the Amazon EIastiCache User Guide.
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+As mentioned at the outset, EIastiCache can be coupled with a wide variety of databases. Here is an example architecture that uses Amazon DynamoDB instead
+of Amazon RDS and IV|ySQL:
+
+This combination of DynamoDB and EIastiCache is very popular with mobile and game companies, because DynamoDB allows for higher write throughput at
+lower cost than traditional relational databases. In addition, DynamoDB uses a key-value access pattern similar to EIastiCache, which also simplifies the
+programming model. Instead of using relational SQL for the primary database but then key-value patterns for the cache, both the primary database and cache can
+be programmed similarly.
+In this architecture pattern, DynamoDB remains the source of truth for data, but application reads are offloaded to EIastiCache for a speed boost.
+
+NEW QUESTION 198
+You are responsible for a legacy web application whose server environment is approaching end of life You would like to migrate this application to AWS as quickly
+as possible, since the application environment currently has the following limitations:
+The VM's single 10GB VMDK is almost full Me virtual network interface still uses the 10Mbps driver, which leaves your 100Mbps WAN connection completely
+underutilized
+It is currently running on a highly customized. Windows VM within a VMware environment: You do not have me installation media
+This is a mission critical application with an RTO (Recovery Time Objective) of 8 hours. RPO (Recovery Point Objective) of 1 hour. How could you best migrate this
+application to AWS while meeting your business continuity requirements?
+A. Use the EC2 VM Import Connector for vCenter to import the VM into EC2.
+B. Use Import/Export to import the VM as an ESS snapshot and attach to EC2.
+C. Use 53 to create a backup of the VM and restore the data into EC2.
+D. Use me ec2-bundle-instance API to Import an Image of the VM into EC2
+Answer: A
+
+NEW QUESTION 201
+Your company currently has a 2-tier web application running in an on-premises data center. You have experienced several infrastructure failures in the past two
+months resu Iting in significant financial losses. Your CIO is strongly agreeing to move the application to AWS. While working on achieving buy-in from the other
+company executives, he asks you to develop a disaster recovery plan to help improve Business continuity in the short term. He specifies a target Recovery Time
+Objective (RTO) of 4 hours and a Recovery Point Objective (RPO) of 1 hour or less. He also asks you to implement the solution within 2 weeks. Your database is
+200GB in size and you have a 20Mbps Internet connection.
+How would you do this while minimizing costs?
+A. Create an EBS backed private AMI which includes a fresh install of your applicatio
+B. Develop a CIoudFormation template which includes your AMI and the required EC2, AutoScaIing, and ELB resources to support deploying the application
+across Multiple- Availability-Zone
+C. Asynchronously replicate transactions from your on-premises database to a database instance in AWS across a secure VPN connection.
+D. Deploy your application on EC2 instances within an Auto Scaling group across multiple availability zone
+E. Asynchronously replicate transactions from your on-premises database to a database instance in AWS across a secure VPN connection.
+F. Create an EBS backed private AMI which includes a fresh install of your applicatio
+G. Setup a script in your data center to backup the local database every 1 hour and to encrypt and copy the resulting file to an 53 bucket using multi-part upload.
+H. Install your application on a compute-optimized EC2 instance capable of supporting the application 's average loa
+I. Synchronously replicate transactions from your on-premises database to a database instance in AWS across a secure Direct Connect connection.
+Answer: A
+Explanation:
+Overview of Creating Amazon EBS-Backed AMIs
+First, launch an instance from an AMI that's similar to the AMI that you'd like to create. You can connect to your instance and customize it. When the instance is
+configured correctly, ensure data integrity by
+stopping the instance before you create an AMI, then create the image. When you create an Amazon EBS-backed AMI, we automatically register it for you.
+Amazon EC2 powers down the instance before creating the AMI to ensure that everything on the instance is stopped and in a consistent state during the creation
+process. If you're confident that your instance is in a consistent state appropriate for AMI creation, you can tell Amazon EC2 not to power down and reboot the
+instance. Some file systems, such as XFS, can freeze and unfreeze actMty, making it safe to create the image without rebooting the instance.
+During the AMI-creation process, Amazon EC2 creates snapshots of your instance's root volume and any other EBS volumes attached to your instance. If any
+volumes attached to the instance are encrypted, the new AMI only launches successfully on instances that support Amazon EBS encryption. For more information,
+see Amazon EBS Encryption.
+Depending on the size of the volumes, it can take several minutes for the AMI-creation process to complete (sometimes up to 24 hours).You may find it more
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+efficient to create snapshots of your volumes prior to creating your AMI. This way, only small, incremental snapshots need to be created when the AMI is created,
+and the process completes more quickly (the total time for snapshot creation remains the same). For more information, see Creating an Amazon EBS Snapshot.
+After the process completes, you have a new AMI and snapshot created from the root volume of the instance. When you launch an instance using the new AMI,
+we create a new EBS volume for its root volume using the snapshot. Both the AMI and the snapshot incur charges to your account until you delete them. For more
+information, see Deregistering Your AMI.
+If you add instance-store volumes or EBS volumes to your instance in addition to the root device volume, the block device mapping for the new AMI contains
+information for these volumes, and the block device mappings for instances that you launch from the new AMI automatically contain information for these volumes.
+The instance-store volumes specified in the block device mapping for the new instance are new and don't contain any data from the instance store volumes of the
+instance you used to create the AMI. The data on EBS volumes persists. For more information, see Block Device Mapping.
+
+NEW QUESTION 202
+Your startup wants to implement an order fulfillment process for selling a personalized gadget that needs an average of 3-4 days to produce with some orders
+taking up to 6 months you expect 10 orders per day on your first day. 1000 orders per day after 6 months and 10,000 orders after 12 months.
+Orders coming in are checked for consistency men dispatched to your manufacturing plant for production quality control packaging shipment and payment
+processing If the product does not meet the quality standards at any stage of the process employees may force the process to repeat a step Customers are
+notified via email about order status and any critical issues with their orders such as payment failure.
+Your case architecture includes AWS Elastic Beanstalk for your website with an RDS MySQL instance for customer data and orders.
+How can you implement the order fulfillment process while making sure that the emails are delivered reliably?
+A. Add a business process management application to your Elastic Beanstalk app servers and re-use the ROS database for tracking order status use one of the
+Elastic Beanstalk instances to send emails to customers.
+B. Use SWF with an Auto Scaling group of actMty workers and a decider instance in another Auto Scaling group with min/max=I Use the decider instance to send
+emails to customers.
+C. Use SWF with an Auto Scaling group of actMty workers and a decider instance in another Auto Scaling group with min/max=I use SES to send emails to
+customers.
+D. Use an SOS queue to manage all process tasks Use an Auto Scaling group of EC2 Instances that poll the tasks and execute the
+E. Use SES to send emails to customers.
+Answer: C
+
+NEW QUESTION 204
+Your system recently experienced down time during the troubleshooting process. You found that a new administrator mistakenly terminated several production
+EC2 instances.
+Which of the following strategies will help prevent a similar situation in the future? The administrator still must be able to:
+- launch, start stop, and terminate development resources.
+- launch and start production instances.
+A. Create an IAM user, which is not allowed to terminate instances by leveraging production EC2 termination protection.
+B. Leverage resource based tagging along with an IAM user, which can prevent specific users from terminating production EC2 resources.
+C. Leverage EC2 termination protection and multi-factor authentication, which together require users to authenticate before terminating EC2 instances
+D. Create an IAM user and apply an IAM role which prevents users from terminating production EC2 instances.
+Answer: B
+Explanation:
+Working with volumes
+When an API action requires a caller to specify multiple resources, you must create a policy statement that allows users to access all required resources. If you
+need to use a Condition element with one or more of these resources, you must create multiple statements as shown in this example.
+The following policy allows users to attach volumes with the tag "volume_user=iam-user-name" to instances with the tag "department=dev", and to detach those
+volumes from those instances. If you attach this policy to an IAM group, the aws:username policy variable gives each IAM user in the group permission to attach or
+detach volumes from the instances with a tag named voIume_ user that has his or her IAM user name as a value.
+{
+"Version": "2012-10-I7",
+"Statement": [{
+"Effect": "A||ow", "Action": [ "ec2:AttachVoIume",
+"ec2:DetachVoIume" I,
+"Resource": "arn :aws:ec2:us-east-1:123456789012:instanee/*", "Condition": {
+"StringEqua|s": { "ec2:ResourceTag/department": "dev" I
+I I,
+{
+"Effect": "A||ow", "Action": [ "ec2:AttachVoIume", "ec2:DetachVoIume" I,
+"Resource": "arn:aws:ec2:us-east-1:123456789012:voIume/*", "Condition": {
+"StringEqua|s": {
+"ec2:ResourceTag/voIume_user": "${aws:username}" I
+IIII
+Launching instances (Runlnstances)
+The Runlnstances API action launches one or more instances. Runlnstances requires an AM and creates an instance; and users can specify a key pair and
+security group in the request. Launching into EC2-VPC requires a subnet, and creates a network interface. Launching from an Amazon EBS-backed AM creates a
+volume. Therefore, the user must have permission to use these Amazon EC2 resources. The caller can also configure the instance using optional parameters to
+Run Instances, such as the instance type and a subnet. You can create a policy statement that requires users to specify an optional parameter, or restricts users to
+particular values for a parameter. The examples in this section demonstrate some of the many possible ways that you can control the configuration of an instance
+that a user can launch.
+Note that by default, users don't have permission to describe, start, stop, or terminate the resulting instances. One way to grant the users permission to manage
+the resulting instances is to create a specific tag for each instance, and then create a statement that enables them to manage instances with that tag. For more
+information, see 2: Working with instances.
+a. AMI
+The following policy allows users to launch instances using only the AM|s that have the specified tag, "department=dev", associated with them. The users can't
+launch instances using other ANI Is because the Condition element of the first statement requires that users specify an AM that has this tag. The users also can't
+launch into a subnet, as the policy does not grant permissions for the subnet and network interface resources. They can, however, launch into EC2-Ciassic. The
+second statement uses a wildcard to enable users to create instance resources, and requires users to specify the key pair
+project_keypair and the security group sg-1a2b3c4d. Users are still able to launch instances without a key pair.
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+{
+"Version": "2012-10-I7",
+"Statement": [{ I,
+{
+"Effect": "A||ow",
+"Action": "ec2:RunInstances", "Resource": [ "arn:aws:ec2:region::image/ami-*" I,
+"Condition": { "StringEqua|s": {
+"ec2:ResourceTag/department": "dev" I
+I I,
+{
+"Effect": "A||ow",
+"Action": "ec2:RunInstances", "Resource": [ "arn:aws:ec2:region:account:instance/*", "arn:aws:ec2:region:account:voIume/*",
+"arn:aws:ec2:region:account:key-pair/project_keypair",
+"arn :aws :ec2: region: account:security-group/sg-1a 2b3c4d" I
+I
+}
+Alternatively, the following policy allows users to launch instances using only the specified AMIs, ami-9e1670f7 and ami-45cf5c3c. The users can't launch an
+instance using other AMIs (unless another statement grants the users permission to do so), and the users can't launch an instance into a subnet.
+{
+"Version": "2012-10-17",
+"Statement": [{
+"Effect": "A||ow",
+"Action": "ec2:RunInstances", "Resource": [
+"arn:aws:ec2:region::image/ami-9e1670f7", "arn:aws:ec2:region::image/ami-45cf5c3c", "arn:aws:ec2:region:account:instance/*",
+"arn:aws:ec2:region:account:voIume/*", "arn:aws:ec2:region:account:key-pair/*", "arn:aws:ec2:region:account:security-group/*"
+}
+}
+Alternatively, the following policy allows users to launch instances from all AMs owned by Amazon. The Condition element of the first statement tests whether
+ec2:0wner is amazon. The users can't launch an instance using other AM Is (unless another statement grants the users permission to do so).
+The users are able to launch an instance into a subnet. "Version": "2012-10-17",
+"Statement": [{
+"Effect": "A| low",
+"Action": "ec2:RunInstances", "Resource": [ "arn:aws:ec2:region::image/ami-*" l,
+"Condition": { "StringEqua|s": { "ec2:0wner": "amazon"
+}
+},
+{
+"Effect": "A||ow",
+"Action": "ec2:RunInstances", "Resource" : [ "arn:aws:ec2:region:account:instance/*", "arn:aws:ec2:region:account:subnet/*",
+"arn:aws:ec2:region:account:voIume/*",
+"arn:aws:ec2:region:account:network-interface/*", "arn:aws:ec2:region:account:key-pair/*", "arn:aws:ec2:region:account:security-group/*"
+I
+}I
+}
+b. Instance type
+The following policy allows users to launch instances using only the t2.micro or t2.sma|I instance type, which you might do to control costs. The users can't launch
+larger instances because the Condition element of the first statement tests whether ec2:1nstanceType is either t2.micro or t2.smaII.
+{
+"Version": "2012-10-I7",
+"Statement": [{
+"Effect": "A| low",
+"Action": "ec2:RunInstances", "Resource": [ "arn:aws:ec2:region:account:instance/*" I,
+"Condition": { "StringEqua|s": {
+"ec2:1nstanceType": ["t2.micro", "t2.smaII"]
+}
+}
+},
+{
+"Effect": "A||ow",
+"Action": "ec2:RunInstances", "Resource": [ "arn:aws:ec2:region::image/ami-*", "arn:aws:ec2:region:account:subnet/*",
+"arn:aws:ec2:region:account:network-interface/*", "arn:aws:ec2:region:account:voIume/*", "arn:aws:ec2:region:account:key-pair/*",
+"arn:aws:ec2:region:account:security-group/*"
+I
+}I
+}
+Alternatively, you can create a policy that denies users permission to launch any instances except t2.micro and t2.sma|I instance types.
+{
+"Version": "2012-10-17",
+"Statement": [{
+"Effect": "Deny",
+"Action": "ec2:RunInstances", "Resource": [ "arn:aws:ec2:region:account:instance/*" l,
+"Condition": { "StringNotEqua|s": {
+"ec2:1nstanceType": ["t2.micro", "t2.smaII"]
+}
+}
+},
+{
+"Effect": "A||ow",
+"Action": "ec2:RunInstances", "Resource": [ "arn:aws:ec2:region::image/ami-*",
+"arn:aws:ec2:region:account:network-interface/* "arn:aws:ec2:region:account:instance/*", "arn:aws:ec2:region:account:subnet/*",
+"arn:aws:ec2:region:account:voIume/*", "arn:aws:ec2:region:account:key-pair/*", "arn:aws:ec2:region:account:security-group/*"
+}
+}
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+c. Subnet
+The following policy allows users to launch instances using only the specified subnet, subnet-12345678. The group can't launch instances into any another subnet
+(unless another statement grants the users permission to do so). Users are still able to launch instances into EC2-Ciassic.
+{
+"Version": "2012-10-17",
+"Statement": [{
+"Effect": "A||ow",
+"Action": "ec2:RunInstances", "Resource": [
+"arn :aws :ec2: region:account:subnet/subnet-123456 78",
+"arn:aws:ec2:region:account:network-interface/*", "arn:aws:ec2:region:account:instance/*", "arn:aws:ec2:region:account:voIume/*",
+"arn:aws:ec2:region::image/ami-*", "arn:aws:ec2:region:account:key-pair/*", "arn:aws:ec2:region:account:security-group/*"
+}
+}
+Alternatively, you could create a policy that denies users permission to launch an instance into any other subnet. The statement does this by denying permission to
+create a network interface, except where subnet subnet-12345678 is specified. This denial overrides any other policies that are created to allow launching
+instances into other subnets. Users are still able to launch instances into EC2-Classic.
+{
+"Version": "2012-10-17",
+"Statement": [{
+"Effect": "Deny",
+"Action": "ec2:RunInstances", "Resource": [
+"arn:aws:ec2:region:account:network-interface/*" l,
+"Condition": { "ArnNotEquaIs": {
+"ec2:Subnet": "arn :aws:ec2:region:account:subnet/subnet-12345678"
+}
+}
+},
+{
+"Effect": "A||ow",
+"Action": "ec2:RunInstances", "Resource": [ "arn:aws:ec2:region::image/ami-*",
+"arn:aws:ec2:region:account:network-interface/*", "arn:aws:ec2:region:account:instance/*", "arn:aws:ec2:region:account:subnet/*",
+"arn:aws:ec2:region:account:voIume/*", "arn:aws:ec2:region:account:key-pair/*", "arn:aws:ec2:region:account:security-group/*"
+}
+}
+
+NEW QUESTION 208
+You are implementing AWS Direct Connect. You intend to use AWS public service end points such as Amazon 53, across the AWS Direct Connect link. You want
+other Internet traffic to use your existing link to an Internet Service Provider.
+What is the correct way to configure AW5 Direct connect for access to services such as Amazon 53?
+A. Configure a public Interface on your AW5 Direct Connect link Configure a static route via your AW5 Direct Connect link that points to Amazon 53 Advertise a
+default route to AW5 using BGP.
+B. Create a private interface on your AW5 Direct Connect lin
+C. Configure a static route via your AW5 Direct connect link that points to Amazon 53 Configure specific routes to your network in your VPC,
+D. Create a public interface on your AW5 Direct Connect link Redistribute BGP routes into your existing routing infrastructure advertise specific routes for your
+network to AW5.
+E. Create a private interface on your AW5 Direct connect lin
+F. Redistribute BGP routes into your existing routing infrastructure and advertise a default route to AW5.
+Answer: C
+
+NEW QUESTION 209
+Your company has an on-premises multi-tier PHP web application, which recently experienced downtime due to a large burst In web traffic due to a company
+announcement Over the coming days, you are expecting similar announcements to drive similar unpredictable bursts, and are looking to find ways to quickly
+improve your infrastructures ability to handle unexpected increases in traffic.
+The application currently consists of 2 tiers a web tier which consists of a load balancer and several Linux Apache web servers as well as a database tier which
+hosts a Linux server hosting a MySQL database. Which scenario below will provide full site functionality, while helping to improve the ability of your application in
+the short timeframe required?
+A. Failover environment: Create an 53 bucket and configure it for website hostin
+B. Migrate your DNS to Route53 using zone file import, and leverage Route53 DNS failover to failover to the 53 hosted website.
+C. Hybrid environment: Create an AMI, which can be used to launch web servers in EC2. Create an Auto Scaling group, which uses the AMI to scale the web tier
+based on incoming traffi
+D. Leverage Elastic Load Balancing to balance traffic between on-premises web servers and those hosted In AWS.
+E. Offload traffic from on-premises environment: Setup a C|oudFront distribution, and configure CIoudFront to cache objects from a custom origi
+F. Choose to customize your object cache behavior, and select a TIL that objects should exist in cache.
+G. Migrate to AWS: Use VM Import/Export to quickly convert an on-premises web server to an AM
+H. Create an Auto Scaling group, which uses the imported AMI to scale the web tier based on incoming traffi
+I. Create an RDS read replica and setup replication between the RDS instance and on-premises MySQL server to migrate the database.
+Answer: C
+
+NEW QUESTION 214
+You are designing a data leak prevention solution for your VPC environment. You want your VPC Instances to be able to access software depots and distributions
+on the Internet for product updates. The depots and distributions are accessible via third party CONs by their URLs. You want to explicitly deny any other outbound
+connections from your VPC instances to hosts on the internet.
+Which of the following options would you consider?
+A. Configure a web proxy server in your VPC and enforce URL-based ru les for outbound access Removedefault routes.
+B. Implement security groups and configure outbound rules to only permit traffic to software depots.
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+C. Move all your instances into private VPC subnets remove default routes from all routing tables and add specific routes to the software depots and distributions
+only.
+D. Implement network access control lists to all specific destinations, with an Implicit deny as a rul
+Answer: A
+
+NEW QUESTION 218
+An AWS customer is deploying an application mat is composed of an AutoScaIing group of EC2 Instances.
+The customers security policy requires that every outbound connection from these instances to any other service within the customers Virtual Private Cloud must
+be authenticated using a unique x 509 certificate that contains the specific instance-id.
+In addition an x 509 certificates must Designed by the customer's Key management service in order to be trusted for authentication.
+Which of the following configurations will support these requirements?
+A. Configure an IAM Role that grants access to an Amazon 53 object containing a signed certificate and configure me Auto Scaling group to launch instances with
+this role Have the instances bootstrap get the certificate from Amazon 53 upon first boot.
+B. Embed a certificate into the Amazon Machine Image that is used by the Auto Scaling group Have the launched instances generate a certificate signature
+request with the instance's assigned instance- id to the Key management service for signature.
+C. Configure the Auto Scaling group to send an SNS notification of the launch of a new instance to the trusted key management servic
+D. Have the Key management service generate a signed certificate and send it directly to the newly launched instance.
+E. Configure the launched instances to generate a new certificate upon first boot Have the Key management service poll the AutoScaIing group for associated
+instances and send new instances acertificate signature (hat contains the specific instance-i
+Answer: A
+
+NEW QUESTION 223
+Your company has recently extended its datacenter into a VPC on AVVS to add burst computing capacity as needed Members of your Network Operations Center
+need to be able to go to the AWS Management Console and administer Amazon EC2 instances as necessary You don't want to create new IAM users for each
+NOC member and make those users sign in again to the AWS Management Console Which option below will meet the needs for your NOC members?
+A. Use OAuth 2 0 to retrieve temporary AWS security credentials to enable your NOC members to sign in to the AVVS Management Console.
+B. Use web Identity Federation to retrieve AWS temporary security credentials to enable your NOC members to sign in to the AWS Management Console.
+C. Use your on-premises SAML 2.0-compliant identity provider (IOP) to grant the NOC members federated access to the AWS Management Console via the AWS
+sing Ie sign-on (550) endpoint.
+D. Use your on-premises SAML2.0-comp|iam identity provider (IOP) to retrieve temporary security credentials to enable NOC members to sign in to the AWS
+Management Console.
+Answer: D
+
+NEW QUESTION 225
+You are designing an SSUTLS solution that requires HTIPS clients to be authenticated by the Web server using client certificate authentication. The solution must
+be resilient.
+Which of the following options would you consider for configuring the web server infrastructure? (Choose 2 answers)
+A. Configure ELB with TCP listeners on TCP/4d3. And place the Web servers behind it.
+B. Configure your Web servers with EIPS Place the Web servers in a Route53 Record Set and configure health checks against all Web servers.
+C. Configure ELB with HTIPS listeners, and place the Web servers behind it.
+D. Configure your web servers as the origins for a Cloud Front distributio
+E. Use custom SSL certificates on your Cloud Front distribution.
+Answer: AB
+
+NEW QUESTION 230
+You are designing a connectMty solution between on-premises infrastructure and Amazon VPC. Your server's on-premises will De communicating with your VPC
+instances. You will De establishing IPSec tunnels over the internet You will be using VPN gateways and terminating the IPsec tunnels on AWS supported
+customer gateways.
+Which of the following objectives would you achieve by implementing an IPSec tunnel as outlined above? (Choose 4 answers)
+A. End-to-end protection of data in transit
+B. End-to-end Identity authentication
+C. Data encryption across the Internet
+D. Protection of data in transit over the Internet
+E. Peer identity authentication between VPN gateway and customer gateway
+F. Data integrity protection across the Internet
+Answer: C0EF
+
+NEW QUESTION 235
+Your fortune 500 company has under taken a TCO analysis evaluating the use of Amazon 53 versus acquiring more hardware The outcome was that ail
+employees would be granted access to use Amazon 53 for storage of their personal documents.
+Which of the following will you need to consider so you can set up a solution that incorporates single sign-on from your corporate AD or LDAP directory and
+restricts access for each user to a designated user folder in a bucket? (Choose 3 Answers)
+A. Setting up a federation proxy or identity provider
+B. Using AWS Security Token Service to generate temporary tokens
+C. Tagging each folder in the bucket
+D. Configuring IAM role
+E. Setting up a matching IAM user for every user in your corporate directory that needs access to a folder in the bucket
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+Answer: ABD
+
+NEW QUESTION 239
+You are developing a new mobile application and are considering storing user preferences in AWS.2w This would provide a more uniform cross-device experience
+to users using multiple mobile devices to access the application. The preference data for each user is estimated to be SOKB in size Additionally 5 million
+customers are expected to use the application on a regular basis. The solution needs to be
+cost-effective, highly available, scalable and secure, how would you design a solution to meet the above requirements?
+A. Setup an RDS MySQL instance in 2 availability zones to store the user preference dat
+B. Deploy a public facing application on a server in front of the database to manage security and access credentials
+C. Setup a DynamoDB table with an item for each user having the necessary attributes to hold the user preference
+D. The mobile application will query the user preferences directly from the DynamoDB tabl
+E. Utilize ST
+F. Web Identity Federation, and DynamoDB Fine Grained Access Control to authenticate and authorize access.
+G. Setup an RDS MySQL instance with multiple read replicas in 2 availability zones to store the user preference data .The mobile application will query the user
+preferences from the read replica
+H. Leverage the MySQL user management and access prMlege system to manage security and access credentials.
+I. Store the user preference data in 53 Setup a DynamoDB table with an item for each user and an item attribute pointing to the user' 53 objec
+J. The mobile application will retrieve the 53 URL from DynamoDB and then access the 53 object directly utilize STS, Web identity Federation, and 53 ACLs to
+authenticate and authorize access.
+Answer: B
+
+NEW QUESTION 242
+Your customer is willing to consolidate their log streams (access logs application logs security logs etc.) in one single system. Once consolidated, the customer
+wants to analyze these logs in real time based on heuristics. From time to time, the customer needs to validate heuristics, which requires going back to data
+samples extracted from the last 12 hours?
+What is the best approach to meet your customer's requirements?
+A. Send all the log events to Amazon SQ
+B. Setup an Auto Scaling group of EC2 sewers to consume the logs and apply the heuristics.
+C. Send all the log events to Amazon Kinesis develop a client process to apply heuristics on the logs
+D. Configure Amazon Cloud Trail to receive custom logs, use EMR to apply heuristics the logs
+E. Setup an Auto Scaling group of EC2 syslogd servers, store the logs on 53 use EMR to apply heuristics on the logs
+Answer: B
+Explanation:
+The throughput of an Amazon Kinesis stream is designed to scale without limits via increasing the number of shards within a stream. However, there are certain
+limits you should keep in mind while using Amazon Kinesis Streams:
+By default, Records of a stream are accessible for up to 24 hours from the time they are added to the stream. You can raise this limit to up to 7 days by enabling
+extended data retention.
+The maximum size of a data blob (the data payload before Base64-encoding) within one record is 1 megabyte (MB).
+Each shard can support up to 1000 PUT records per second.
+For more information about other API level limits, see Amazon Kinesis Streams Limits.
+
+NEW QUESTION 247
+You are running a successful multitier web application on AWS and your marketing department has asked you to add a reporting tier to the application. The
+reporting tier will aggregate and publish status reports every 30 minutes from user-generated information that is being stored in your web application s database.
+You are currently running a MuIti-AZ RDS MySQL instance for the database tier. You also have implemented Elasticache as a database caching layer between the
+application tier and database tier. Please select the answer that will allow you to successful ly implement the reporting tier with as little impact as possible to your
+database.
+A. Continually send transaction logs from your master database to an 53 bucket and generate the reports off the 53 bucket using 53 byte range request s.
+B. Generate the reports by querying the synchronously replicated standby RDS MySQL instance maintained through Multi-AZ.
+C. Launch a RDS Read Replica connected to your MuIti AZ master database and generate reports by querying the Read Replica.
+D. Generate the reports by querying the EIastiCache database caching tie
+Answer: C
+Explanation:
+Amazon RDS allows you to use read replicas with MuIti-AZ deployments. In Multi-AZ deployments for MySQL, Oracle, SQL Server, and PostgreSQL, the data in
+your primary DB Instance is synchronously replicated to a standby instance in a different Availability Zone (AZ). Because of their synchronous replication, MuIti-AZ
+deployments for these engines offer greater data durability benefits than do read replicas. (In all Amazon RDS for Aurora deployments, your data is automatically
+replicated across 3 Availability Zones.)
+You can use MuIti-AZ deployments and read replicas in conjunction to enjoy the complementary benefits of each. You can simply specify that a given Multi-AZ
+deployment is the source DB Instance for your Read replicas. That way you gain both the data durability and availability benefits of Multi -AZ deployments and the
+read scaling benefits of read replicas.
+Note that for MuIti-AZ deployments, you have the option to create your read replica in an AZ other than that of the primary and the standby for even more
+redundancy. You can identify the AZ corresponding to your standby by looking at the "Secondary Zone" field of your DB Instance in the AWS Management
+Console.
+
+NEW QUESTION 251
+You must assign each sewer to at least _ security group
+A. 3
+B. 2
+C. 4
+D. 1
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+Answer: A
+
+NEW QUESTION 253
+Before I delete an EBS volume, what can I do if I want to recreate the volume later?
+A. Create a copy of the EBS volume (not a snapshot)
+B. Store a snapshot of the volume
+C. Download the content to an EC2 instance
+D. Back up the data in to a physical disk
+Answer: B
+
+NEW QUESTION 257
+If I want an instance to have a public IP address, which IP address should I use'?
+A. Elastic I P Address
+B. Class B IP Address
+C. Class A IP Address
+D. Dynamic IP Address
+Answer: A
+
+NEW QUESTION 261
+When you run a DB Instance as a Multi-AZ deployment, the " _ " serves database writes and reads
+A. secondary
+B. backup
+C. stand by
+D. primary
+Answer: D
+
+NEW QUESTION 264
+Can you create IAM security credentials for existing users?
+A. Yes, existing users can have security credentials associated with their account.
+B. No, IAM requires that all users who have credentials set up are not existing users
+C. No, security credentials are created within GROUPS, and then users are associated to GROUPS at a later time.
+D. Yes, but only IAM credentials, not ordinary security credential
+Answer: A
+
+NEW QUESTION 267
+True or False: When using IAM to control access to your RDS resources, the key names that can be used are case sensitive. For example, aws:CurrentTime is
+NOT equivalent to AWS:currenttime.
+A. TRUE
+B. FALSE
+Answer: A
+
+NEW QUESTION 268
+What does the AWS Storage Gateway provide?
+A. It allows to integrate on-premises IT environments with Cloud Storage.
+B. A direct encrypted connection to Amazon 53.
+C. It's a backup solution that provides an on-premises Cloud storage.
+D. It provides an encrypted SSL endpoint for backups in the Clou
+Answer: A
+
+NEW QUESTION 269
+Fill in the blanks: The base URI for all requests for instance metadata is _ _
+A. http://254.169.169.254/Iatest/
+B. http://169.169.254.254/|atesU
+C. http://127.0.0.1/|atest/
+D. http://I69.254.169.254/|atest/
+Answer: D
+
+NEW QUESTION 274
+While creating the snapshots using the command line tools, which command should I be using?
+
+Guaranteed success with Our exam guides
+
+visit - https://www.certshared.com
+
+Certshared now are offering 100% pass ensure AWS-Solution-Architect-Associate dumps!
+https://www.certshared.com/exam/AWS-Solution-Architect-Associate/ (615 Q&As)
+
+A. ec2-deploy-snapshot
+B. ec2-fresh-snapshot
+C. ec2-create-snapshot
+D. ec2-new-snapshot
+Answer: C
